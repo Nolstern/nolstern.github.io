@@ -1,110 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Main Pages -->
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/index.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
+    <loc>https://nolstern.github.io/</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/project-overview.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
+    <loc>https://nolstern.github.io/seo-strategy.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/seo-strategy.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://nolstern.github.io/start-a-project.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/start-a-project.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://nolstern.github.io/why-seo-matters.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/why-seo-matters.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <loc>https://nolstern.github.io/seo-blog.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/terminology.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/project-overview.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/seo-blog.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <loc>https://nolstern.github.io/terminology.html</loc>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- BLOG POSTS -->
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/ai-mode-seo-2025.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/best-way-to-learn-seo.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/internal-linking-ai.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/how-long-to-learn-seo.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/june-core-update-2025.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/ai-mode-seo-2025.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/ga4-seo-tracking.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/ga4-features-2025.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/ga4-features-2025.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/ga4-seo-tracking.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/best-way-to-learn-seo.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/internal-linking-ai.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/how-long-to-learn-seo.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/june-core-update-2025.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/mastering-aeo-2025.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/mastering-aeo-2025.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/micro-influencers-seo.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/micro-influencers-seo.html</loc>
   </url>
   <url>
-    <loc>https://nolstern.github.io/SEO-Guide/blog/salesforce-ai-marketing.html</loc>
-    <lastmod>2025-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <loc>https://nolstern.github.io/salesforce-ai-marketing.html</loc>
   </url>
 
 </urlset> 
