@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nolstern.github.io/sitemap.xml
+Sitemap: https://nolstern.github.io/sitemap.txt 
