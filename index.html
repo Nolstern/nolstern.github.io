@@ -31,67 +31,135 @@
 
   gtag('config', 'G-RF302P8XBG');
 </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="/" class="logo-link">
-      <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+<body class="index-page">
+  <header>
+    <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="why-seo-matters.html">Why SEO</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="seo-strategy.html">Strategy</a></li>
+        <li><a href="start-a-project.html">Start a Project</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li><a href="seo-blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="progress-bar"></div>
+
+  <section class="hero">
+    <div class="floating-element">
+      <i class="fas fa-search" style="font-size: 2rem; color: var(--primary-color); opacity: 0.3;"></i>
+    </div>
+    <div class="floating-element">
+      <i class="fas fa-chart-line" style="font-size: 1.5rem; color: var(--secondary-color); opacity: 0.3;"></i>
+    </div>
+    <div class="floating-element">
+      <i class="fas fa-lightbulb" style="font-size: 1.8rem; color: var(--accent-color); opacity: 0.3;"></i>
+    </div>
+    <div class="hero-wrapper">
+      <h1>How to Learn Search Engine Optimization</h1>
+      <p class="hero-lead">
+        If you're new to SEO, you're in the right place. I was too. That's why I built this free, beginner-focused guide to help you learn search engine optimization step by step. Instead of jumping between scattered articles and videos, you'll follow a clear path and start SEO from scratch. You'll gain real skills along the way.
+      </p>
+      <a class="cta" href="#guide">Get Started <i class="fas fa-arrow-down"></i></a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-content">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span>
+          <div class="stat-content">
+            <span class="stat-label">Core Lessons</span>
+            <span class="stat-description">Foundational guides that walk you through SEO from the ground up</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <div class="stat-content">
+            <span class="stat-label">% Free Content</span>
+            <span class="stat-description">Everything on this site is open access with no paywalls or signups</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="17">0</span>
+          <div class="stat-content">
+            <span class="stat-label">Terms Explained</span>
+            <span class="stat-description">Straightforward definitions of essential SEO concepts and tools</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2">0</span>
+          <div class="stat-content">
+            <span class="stat-label">Bonus Pages</span>
+            <span class="stat-description">Go deeper with a full project walkthrough and up-to-date blog</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="guide">
+    <div class="guide-bg"></div>
+    <div class="guide-content">
+      <h2>Your Roadmap to SEO Success</h2>
+      <div class="card-grid">
+        <div class="card fade-in">
+          <h3><i class="fa fa-search icon"></i> Why SEO Matters</h3>
+          <p>SEO is the foundation of online visibility. This section explains how search engines work, why ranking matters, and how learning the basics can help your website grow. If you're new to the field, this is a great place to start.</p>
+          <a href="why-seo-matters.html" class="button">Start With the Basics <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card fade-in">
+          <h3><i class="fa fa-language icon"></i> Terminology</h3>
+          <p>New to SEO terms? No problem. You'll learn the key language and concepts in a clear, simple way so you can follow guides, tutorials, and conversations with confidence.</p>
+          <a href="terminology.html" class="button">Learn the Terms <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card fade-in">
+          <h3><i class="fa fa-cogs icon"></i> Strategy</h3>
+          <p>Learn how to go from definitions to strategy. This section shows you how to choose keywords, structure your site, and create content that works for both people and search engines.</p>
+          <a href="seo-strategy.html" class="button">Build Your Foundation <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card fade-in">
+          <h3><i class="fa fa-rocket icon"></i> Start a Project</h3>
+          <p>Ready to apply what you've learned? I'll walk you through a beginner-friendly SEO project, step by step. No experience is needed, just curiosity and a willingness to try.</p>
+          <a href="start-a-project.html" class="button">Start a Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card fade-in">
+          <h3><i class="fa fa-code icon"></i> Project Overview</h3>
+          <p>See how this site was built from scratch without any formal experience. I'll show you how I taught myself SEO at home and turned each concept into a working project.</p>
+          <a href="project-overview.html" class="button">See How It's Made <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card fade-in">
+          <h3><i class="fa fa-newspaper icon"></i> Blog</h3>
+          <p>Explore insights on SEO, AI, Google Analytics, and digital marketing. This blog dives into evolving search trends, algorithm shifts, and practical strategies to help you grow in a constantly changing digital world.</p>
+          <a href="seo-blog.html" class="button">Read the Blog <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-content">
+    © 2024 SEO Guide. Built with passion and Cursor. 
+    <a href="https://github.com/Nolstern/nolstern.github.io" target="_blank" style="color: #fff; font-weight: 600; text-decoration: underline; margin-left: 0.5rem;">
+      <i class="fab fa-github" aria-hidden="true"></i> GitHub
     </a>
-    <ul>
-      <li><a href="why-seo-matters.html">Why SEO</a></li>
-      <li><a href="terminology.html">Terminology</a></li>
-      <li><a href="seo-strategy.html">Strategy</a></li>
-      <li><a href="start-a-project.html">Start a Project</a></li>
-      <li><a href="project-overview.html">Project Overview</a></li>
-      <li><a href="seo-blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <section class="hero hero-centered">
-    <h1>How to Learn Search Engine Optimization</h1>
-    <p class="hero-lead">
-      If you're new to SEO, you're in the right place. I was too. That's why I built this free, beginner-focused guide to help you learn search engine optimization step by step. Instead of jumping between scattered articles and videos, you'll follow a clear path and start SEO from scratch. You'll gain real skills along the way.
-    </p>
-    <a class="cta" href="#guide">Get Started</a>
-  </section>
-  <section id="guide" class="guide alt-section">
-    <h2>Your Roadmap to SEO Success</h2>
-    <section class="card-grid">
-      <div class="card">
-        <h3><i class="fa fa-search icon"></i> Why SEO Matters</h3>
-        <p>SEO is the foundation of online visibility. This section explains how search engines work, why ranking matters, and how learning the basics can help your website grow. If you're new to the field, this is a great place to start.</p>
-        <a href="why-seo-matters.html" class="button">Start With the Basics</a>
-      </div>
-      <div class="card">
-        <h3><i class="fa fa-language icon"></i> Terminology</h3>
-        <p>New to SEO terms? No problem. You'll learn the key language and concepts in a clear, simple way so you can follow guides, tutorials, and conversations with confidence.</p>
-        <a href="terminology.html" class="button">Learn the Terms</a>
-      </div>
-      <div class="card">
-        <h3><i class="fa fa-cogs icon"></i> Strategy</h3>
-        <p>Learn how to go from definitions to strategy. This section shows you how to choose keywords, structure your site, and create content that works for both people and search engines.</p>
-        <a href="seo-strategy.html" class="button">Build Your Foundation</a>
-      </div>
-      <div class="card">
-        <h3><i class="fa fa-rocket icon"></i> Start a Project</h3>
-        <p>Ready to apply what you've learned? I'll walk you through a beginner-friendly SEO project, step by step. No experience is needed, just curiosity and a willingness to try.</p>
-        <a href="start-a-project.html" class="button">Start a Project</a>
-      </div>
-      <div class="card">
-        <h3><i class="fa fa-code icon"></i> Project Overview</h3>
-        <p>See how this site was built from scratch without any formal experience. I'll show you how I taught myself SEO at home and turned each concept into a working project.</p>
-        <a href="project-overview.html" class="button">See How It's Made</a>
-      </div>
-      <div class="card">
-        <h3><i class="fa fa-newspaper icon"></i> Blog</h3>
-        <p>Explore insights on SEO, AI, Google Analytics, and digital marketing. This blog dives into evolving search trends, algorithm shifts, and practical strategies to help you grow in a constantly changing digital world.</p>
-        <a href="seo-blog.html" class="button">Read the Blog</a>
-      </div>
-    </section>
-  </section>
-  <footer>
-    &copy; 2024 Your Name. Built with Cursor. <a href="https://github.com/yourusername" target="_blank" style="color:#1e40af;">GitHub</a>
   </footer>
+
+  <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="main-homepage.js"></script>
 </body>
 </html> 

@@ -31,6 +31,10 @@
 
   gtag('config', 'G-RF302P8XBG');
 </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
@@ -140,202 +144,365 @@
       min-width: 2.1rem;
       text-align: center;
     }
+    .terminology-page {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
   </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="/index.html" class="logo-link">
-      <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-    </a>
-    <ul>
-      <li><a href="why-seo-matters.html">Why SEO</a></li>
-      <li><a href="terminology.html" class="active">Terminology</a></li>
-      <li><a href="seo-strategy.html">Strategy</a></li>
-      <li><a href="start-a-project.html">Start a Project</a></li>
-      <li><a href="project-overview.html">Project Overview</a></li>
-      <li><a href="seo-blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <section class="section-content" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px rgba(59,77,138,0.07); max-width:900px; margin:2.5rem auto 3.5rem auto; padding:3.5rem 2rem;">
-    <h1 class="seo-glossary-title" style="color:#174ea6; font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:2rem; letter-spacing:-0.02em;">SEO Terminology for Beginners</h1>
-    <p class="seo-intro mb-4" style="line-height:1.8; color:#3b4a6b;">Learning SEO terminology is one of the first steps to becoming confident in search engine optimization. This page breaks down essential SEO terms in beginner-friendly language so you can follow tutorials, apply strategies, and start optimizing with clarity.</p>
+<body class="terminology-page">
+  <header>
+    <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="why-seo-matters.html">Why SEO</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="seo-strategy.html">Strategy</a></li>
+        <li><a href="start-a-project.html">Start a Project</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li><a href="seo-blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="progress-bar"></div>
+  <div class="terminology-page">
+    <div class="main-container">
+      <!-- Intro block on plain page background, not its own section -->
+      <div class="terminology-intro-hero" style="max-width:950px;margin:2.5rem auto 0 auto;text-align:center;">
+        <h2 class="section-title" style="color:#fff !important;font-size:3.2rem !important;font-weight:800;letter-spacing:-0.02em;margin-bottom:2rem;">SEO Terminology for Beginners</h2>
+        <div style="font-size:1.45rem; font-weight:600; line-height:1.8; margin-bottom:1.3rem; color:#fff !important;">
+          Learning SEO terminology is one of the first steps to becoming confident in search engine optimization. This guide breaks down essential terms in beginner-friendly language, helping you follow tutorials, apply strategies, and begin optimizing with clarity. Rather than memorizing everything at once, focus on understanding the key ideas and return to this page as needed for quick reference.
+        </div>
+        <div class="glossary-nav-instructions" style="text-align:center;margin:1.5rem 0 0.7rem 0;font-size:1.18rem;font-weight:600;color:#fff !important;">
+          Use the search bar to quickly find terms, or tap an icon to jump to a category:
+        </div>
+        <div class="glossary-search-bar" style="display:flex;justify-content:center;margin:1.2rem 0 1.5rem 0;">
+          <input type="text" class="glossary-search-input" placeholder="Search SEO terms…" style="width:100%;max-width:420px;padding:0.85rem 1.2rem;font-size:1.08rem;border-radius:2em;border:1.5px solid #e0e3ef;box-shadow:0 2px 8px rgba(59,77,138,0.06);outline:none;transition:border-color 0.18s;color:#fff;background:rgba(255,255,255,0.08);" />
+        </div>
+        <style>
+        .glossary-search-input::placeholder {
+          color: #fff !important;
+          opacity: 1;
+        }
+        </style>
+        <div class="glossary-section-jump-row" style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:0.2rem;flex-wrap:wrap;">
+          <a href="#visibility" class="glossary-section-jump" style="text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+            <span style="font-size:1.5rem;color:#fff;">👁️</span>
+            <span style="font-size:0.98rem;color:#fff;">Visibility</span>
+          </a>
+          <a href="#content" class="glossary-section-jump" style="text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+            <span style="font-size:1.5rem;color:#fff;">📝</span>
+            <span style="font-size:0.98rem;color:#fff;">Content</span>
+          </a>
+          <a href="#technical" class="glossary-section-jump" style="text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+            <span style="font-size:1.5rem;color:#fff;">⚙️</span>
+            <span style="font-size:0.98rem;color:#fff;">Technical</span>
+          </a>
+          <a href="#authority" class="glossary-section-jump" style="text-decoration:none;color:#fff;display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+            <span style="font-size:1.5rem;color:#fff;">🏆</span>
+            <span style="font-size:0.98rem;color:#fff;">Authority</span>
+          </a>
+        </div>
+      </div>
+      <div class="glossary-unified-bg">
+        <!-- Remove intro, nav, and search from inside the white card -->
+        <script>
+        // Add jump-to-card search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+          const input = document.querySelector('.glossary-search-input');
+          if (!input) return;
+          input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+              const query = input.value.trim().toLowerCase();
+              if (!query) return;
+              const cards = Array.from(document.querySelectorAll('.term-card'));
+              let found = null;
+              for (const card of cards) {
+                const title = card.querySelector('.term-name')?.textContent?.toLowerCase() || '';
+                const desc = card.querySelector('.term-description')?.textContent?.toLowerCase() || '';
+                if (title.includes(query) || desc.includes(query)) {
+                  found = card;
+                  break;
+                }
+              }
+              if (found) {
+                found.scrollIntoView({behavior: 'smooth', block: 'center'});
+                found.classList.add('search-highlight');
+                setTimeout(() => found.classList.remove('search-highlight'), 1200);
+              }
+            }
+          });
+        });
+        </script>
+        <!-- Visibility & Search Presence -->
+        <section class="terminology-section" id="visibility">
+          <div class="section-header">
+            <div class="section-icon visibility">👁️</div>
+            <h2 class="section-title">Visibility & Search Presence</h2>
+          </div>
+          <div class="terms-grid">
+            <div class="term-card" id="term-seo">
+              <div class="term-header">
+                <div class="term-icon">🔍</div>
+                <h3 class="term-name">SEO (Search Engine Optimization)</h3>
+              </div>
+              <p class="term-description">SEO stands for Search Engine Optimization. It is the process of improving your website so that search engines can find and recommend it more easily. A good way to think of SEO is like building a clear map. If search engines can follow your content and understand its purpose, they are more likely to guide others to it.</p>
+            </div>
 
-    <!-- Visibility & Search Presence -->
-    <section class="seo-section" style="margin-bottom:2.5rem;">
-      <div class="seo-section-title" style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em; display:flex; align-items:center; gap:0.7rem;">
-        <i class="fa fa-eye" style="color:#2563eb; font-size:1.4rem;"></i> <span style="color:#174ea6; font-weight:700; font-size:1.7rem;">Visibility & Search Presence</span>
-      </div>
-      <div style="border-bottom:1px solid #e0e3ef; width:60px; margin:0.2rem 0 1.5rem 0;"></div>
-      <div class="seo-term-list" style="display:flex;flex-direction:column;gap:1.7rem;">
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-magnifying-glass-chart" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">SEO (Search Engine Optimization)</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">SEO stands for Search Engine Optimization. It is the process of improving your website so that search engines can find and recommend it more easily. A good way to think of SEO is like building a clear map. If search engines can follow your content and understand its purpose, they are more likely to guide others to it.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-leaf" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Organic Results</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">These are unpaid listings that show up in search engines based on content relevance. They are earned, not bought — and the foundation of SEO.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-bullhorn" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">PPC (Pay-Per-Click)</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">PPC refers to paid ads in search engines. Though not part of SEO, it's useful to know since paid and organic results appear side by side.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-list-ol" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">SERP (Search Engine Results Page)</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">The SERP is the page that shows search results after someone types in a query. It includes both paid ads and organic listings. The closer your page is to the top, the more likely people are to visit it.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-key" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Keywords</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Keywords are the words or phrases people type into search engines. They connect what someone is searching for with the content on your site. If a user searches for best study habits, and your page includes that phrase in a helpful way, your chances of showing up improve. Choosing the right keywords is about understanding your audience and speaking their language.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="term-card" id="term-organic-results">
+              <div class="term-header">
+                <div class="term-icon">🌱</div>
+                <h3 class="term-name">Organic Results</h3>
+              </div>
+              <p class="term-description">These are unpaid listings that show up in search engines based on content relevance. They are earned, not bought — and the foundation of SEO.</p>
+            </div>
 
-    <!-- Content Optimization & Structure -->
-    <section class="seo-section" style="margin-bottom:2.5rem;">
-      <div class="seo-section-title" style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em; display:flex; align-items:center; gap:0.7rem;">
-        <i class="fa fa-align-left" style="color:#2563eb; font-size:1.4rem;"></i> <span style="color:#174ea6; font-weight:700; font-size:1.7rem;">Content Optimization & Structure</span>
-      </div>
-      <div style="border-bottom:1px solid #e0e3ef; width:60px; margin:0.2rem 0 1.5rem 0;"></div>
-      <div class="seo-term-list" style="display:flex;flex-direction:column;gap:1.7rem;">
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-heading" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Title Tag</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">A title tag is the page title that appears in search results and in your browser tab. It should be short, direct, and aligned with what your page offers. A good title tag helps your content stand out and tells users exactly what to expect.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-file-alt" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Meta Description</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">A meta description is the short paragraph that appears below a page title in search results. It does not directly affect ranking, but it can influence whether someone clicks on your link. A clear, relevant description can improve your chances of gaining traffic and helps users know what to expect from your page.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-link" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Anchor Text</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Anchor text is the clickable text in a link. It tells readers and search engines what the linked page is about. Using descriptive, relevant anchor text improves navigation and can boost your page's visibility.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-image" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Alt Text (Alternative Text)</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Alt text is a written description added to images. It helps people using screen readers and allows search engines to understand visual content. Alt text supports accessibility and can contribute to your site's overall SEO when used properly.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-random" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Internal Links</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Links between pages on your own website. These help users navigate your site and help search engines understand your site's structure.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-cogs" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">On-Page SEO</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">On-page SEO includes everything you control on your site. This means your content, layout, structure, and keyword use.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="term-card" id="term-ppc">
+              <div class="term-header">
+                <div class="term-icon">💰</div>
+                <h3 class="term-name">PPC (Pay-Per-Click)</h3>
+              </div>
+              <p class="term-description">PPC refers to paid ads in search engines. Though not part of SEO, it's useful to know since paid and organic results appear side by side.</p>
+            </div>
 
-    <!-- Technical SEO & Performance -->
-    <section class="seo-section" style="margin-bottom:2.5rem;">
-      <div class="seo-section-title" style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em; display:flex; align-items:center; gap:0.7rem;">
-        <i class="fa fa-cogs" style="color:#2563eb; font-size:1.4rem;"></i> <span style="color:#174ea6; font-weight:700; font-size:1.7rem;">Technical SEO & Performance</span>
-      </div>
-      <div style="border-bottom:1px solid #e0e3ef; width:60px; margin:0.2rem 0 1.5rem 0;"></div>
-      <div class="seo-term-list" style="display:flex;flex-direction:column;gap:1.7rem;">
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-spider" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Crawling and Indexing</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Search engines use bots called crawlers to scan websites. When a crawler visits a page, it decides whether to add that page to the index. The index is like a digital library where search engines store useful content. If your page is not indexed, it will not appear in search results. Making your site easy to crawl and providing valuable content increases your chances of being included.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-tools" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Technical SEO</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Technical SEO deals with the behind-the-scenes parts of your site. It includes things like fast loading times, mobile-friendliness, working links, and site structure. These elements help search engines crawl your site and give users a smooth experience.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-sign-out-alt" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Bounce Rate</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Bounce rate shows how many visitors leave after viewing just one page. A high bounce rate can mean people did not find what they expected or were not interested in what they saw. It can signal that your content is unclear, slow, or not engaging. Improving bounce rate often means making your page more helpful, faster, and easier to navigate.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="term-card" id="term-serp">
+              <div class="term-header">
+                <div class="term-icon">📋</div>
+                <h3 class="term-name">SERP (Search Engine Results Page)</h3>
+              </div>
+              <p class="term-description">The SERP is the page that shows search results after someone types in a query. It includes both paid ads and organic listings. The closer your page is to the top, the more likely people are to visit it.</p>
+            </div>
 
-    <!-- Trust, Authority & External Signals -->
-    <section class="seo-section" style="margin-bottom:2.5rem;">
-      <div class="seo-section-title" style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em; display:flex; align-items:center; gap:0.7rem;">
-        <i class="fa fa-shield-alt" style="color:#2563eb; font-size:1.4rem;"></i> <span style="color:#174ea6; font-weight:700; font-size:1.7rem;">Trust, Authority & External Signals</span>
-      </div>
-      <div style="border-bottom:1px solid #e0e3ef; width:60px; margin:0.2rem 0 1.5rem 0;"></div>
-      <div class="seo-term-list" style="display:flex;flex-direction:column;gap:1.7rem;">
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-link" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Backlinks</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">A backlink is a link from another website to your own. These links act like a recommendation, signaling that your content is valuable and trustworthy. Search engines view backlinks as a vote of confidence.</div>
+            <div class="term-card" id="term-keywords">
+              <div class="term-header">
+                <div class="term-icon">🔑</div>
+                <h3 class="term-name">Keywords</h3>
+              </div>
+              <p class="term-description">Keywords are the words or phrases people type into search engines. They connect what someone is searching for with the content on your site. If a user searches for "best study habits," and your page includes that phrase in a helpful way, your chances of showing up improve. Choosing the right keywords is about understanding your audience and speaking their language.</p>
+            </div>
           </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-globe" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Off-Page SEO</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Off-page SEO focuses on what others say about your site. It includes backlinks and other signals of trust. Both are important. On-page helps search engines understand your content. Off-page helps prove your site is worth trusting.</div>
-          </div>
-        </div>
-        <div class="seo-term-block" style="background:#f8f9fc;display:flex;align-items:center;padding:1.2rem 1.3rem;border-radius:14px;box-shadow:0 1.5px 8px rgba(23,78,166,0.04);gap:1.1rem;">
-          <i class="fa fa-award" style="color:#2563eb;font-size:1.7rem;min-width:28px;"></i>
-          <div>
-            <div class="seo-term" style="font-weight:700;color:#174ea6;font-size:1.13rem;">Domain Authority (DA)</div>
-            <div class="seo-term-desc" style="color:#3b4a6b;line-height:1.8;margin-top:0.3rem;">Domain Authority, or DA, is a score that shows how trustworthy and established your website is. It is based on factors like backlinks, site history, and content quality. Higher authority can lead to better rankings, but it takes time and effort to build.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Bringing It All Together -->
-    <section class="seo-section" style="margin-bottom:2.5rem;">
-      <div class="seo-section-title" style="color:#223; font-size:1.35rem; font-weight:700; margin:2.7rem auto 1.3rem auto; letter-spacing:-0.01em; text-align:center; display:table;">
-        <i class="fa fa-puzzle-piece" style="color:#2563eb; font-size:1.5rem; margin-right:0.5rem;"></i>
-        <span style="color:#174ea6; font-weight:700; font-size:1.7rem;">Bringing It All Together</span>
+        <!-- Content Optimization & Structure -->
+        <section class="terminology-section" id="content">
+          <div class="section-header">
+            <div class="section-icon content">📝</div>
+            <h2 class="section-title">Content Optimization & Structure</h2>
+          </div>
+          <div class="terms-grid">
+            <div class="term-card" id="term-title-tag">
+              <div class="term-header">
+                <div class="term-icon">📌</div>
+                <h3 class="term-name">Title Tag</h3>
+              </div>
+              <p class="term-description">A title tag is the page title that appears in search results and in your browser tab. It should be short, direct, and aligned with what your page offers. A good title tag helps your content stand out and tells users exactly what to expect.</p>
+            </div>
+            <div class="term-card" id="term-meta-description">
+              <div class="term-header">
+                <div class="term-icon">📄</div>
+                <h3 class="term-name">Meta Description</h3>
+              </div>
+              <p class="term-description">A meta description is the short paragraph that appears below a page title in search results. It does not directly affect ranking, but it can influence whether someone clicks on your link. A clear, relevant description can improve your chances of gaining traffic and helps users know what to expect from your page.</p>
+            </div>
+            <div class="term-card" id="term-header-tags">
+              <div class="term-header">
+                <div class="term-icon">#️⃣</div>
+                <h3 class="term-name">Header Tags</h3>
+              </div>
+              <p class="term-description">Header tags (H1, H2, H3, etc.) organize your content into sections and make it easier for both users and search engines to understand your page structure.</p>
+            </div>
+            <div class="term-card" id="term-anchor-text">
+              <div class="term-header">
+                <div class="term-icon">🔗</div>
+                <h3 class="term-name">Anchor Text</h3>
+              </div>
+              <p class="term-description">Anchor text is the clickable text in a link. It tells readers and search engines what the linked page is about. Using descriptive, relevant anchor text improves navigation and can boost your page's visibility.</p>
+            </div>
+            <div class="term-card" id="term-alt-text">
+              <div class="term-header">
+                <div class="term-icon">🖼️</div>
+                <h3 class="term-name">Alt Text (Alternative Text)</h3>
+              </div>
+              <p class="term-description">Alt text is a written description added to images. It helps people using screen readers and allows search engines to understand visual content. Alt text supports accessibility and can contribute to your site's overall SEO when used properly.</p>
+            </div>
+            <div class="term-card" id="term-internal-links">
+              <div class="term-header">
+                <div class="term-icon">🔗</div>
+                <h3 class="term-name">Internal Links</h3>
+              </div>
+              <p class="term-description">Links between pages on your own website. These help users navigate your site and help search engines understand your site's structure.</p>
+            </div>
+            <div class="term-card" id="term-on-page-seo">
+              <div class="term-header">
+                <div class="term-icon">🛠️</div>
+                <h3 class="term-name">On-Page SEO</h3>
+              </div>
+              <p class="term-description">On-page SEO includes everything you control on your site. This means your content, layout, structure, and keyword use. It helps search engines understand what your page is about and how relevant it is to users.</p>
+            </div>
+            <div class="term-card" id="term-readability">
+              <div class="term-header">
+                <div class="term-icon">📖</div>
+                <h3 class="term-name">Readability</h3>
+              </div>
+              <p class="term-description">Readability means how easy your content is to read and understand. Clear, simple writing helps users and can improve your SEO.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Technical SEO & Performance -->
+        <section class="terminology-section" id="technical">
+          <div class="section-header">
+            <div class="section-icon technical">⚙️</div>
+            <h2 class="section-title">Technical SEO & Performance</h2>
+          </div>
+          <div class="terms-grid">
+            <div class="term-card" id="term-crawling-indexing">
+              <div class="term-header">
+                <div class="term-icon">🕷️</div>
+                <h3 class="term-name">Crawling and Indexing</h3>
+              </div>
+              <p class="term-description">Search engines use bots called crawlers to scan websites. When a crawler visits a page, it decides whether to add that page to the index. The index is like a digital library where search engines store useful content. If your page is not indexed, it will not appear in search results. Making your site easy to crawl and providing valuable content increases your chances of being included.</p>
+            </div>
+            <div class="term-card" id="term-xml-sitemap">
+              <div class="term-header">
+                <div class="term-icon">🗺️</div>
+                <h3 class="term-name">XML Sitemap</h3>
+              </div>
+              <p class="term-description">An XML sitemap is a file that lists all the important pages on your website. It helps search engines find and index your content more efficiently.</p>
+            </div>
+            <div class="term-card" id="term-robots-txt">
+              <div class="term-header">
+                <div class="term-icon">🤖</div>
+                <h3 class="term-name">Robots.txt</h3>
+              </div>
+              <p class="term-description">The robots.txt file tells search engines which pages or sections of your site they are allowed to crawl and index.</p>
+            </div>
+            <div class="term-card" id="term-site-speed">
+              <div class="term-header">
+                <div class="term-icon">⚡</div>
+                <h3 class="term-name">Site Speed</h3>
+              </div>
+              <p class="term-description">Site speed is how quickly your web pages load. Faster sites provide a better user experience and can rank higher in search results.</p>
+            </div>
+            <div class="term-card" id="term-mobile-responsiveness">
+              <div class="term-header">
+                <div class="term-icon">📱</div>
+                <h3 class="term-name">Mobile Responsiveness</h3>
+              </div>
+              <p class="term-description">Mobile responsiveness means your site looks and works well on smartphones and tablets. Google favors mobile-friendly sites in its rankings.</p>
+            </div>
+            <div class="term-card" id="term-bounce-rate">
+              <div class="term-header">
+                <div class="term-icon">↩️</div>
+                <h3 class="term-name">Bounce Rate</h3>
+              </div>
+              <p class="term-description">Bounce rate shows how many visitors leave after viewing just one page. A high bounce rate can mean people didn’t find what they expected or were not interested in what they saw. Improving bounce rate often means making your page more helpful, faster, and easier to navigate.</p>
+            </div>
+            <div class="term-card" id="term-core-web-vitals">
+              <div class="term-header">
+                <div class="term-icon">📊</div>
+                <h3 class="term-name">Core Web Vitals</h3>
+              </div>
+              <p class="term-description">Core Web Vitals are a set of metrics that measure user experience, including loading speed, interactivity, and visual stability of your site.</p>
+            </div>
+            <div class="term-card" id="term-schema-markup">
+              <div class="term-header">
+                <div class="term-icon">🔖</div>
+                <h3 class="term-name">Schema Markup</h3>
+              </div>
+              <p class="term-description">Schema markup is code you add to your site to help search engines understand your content and display rich results (like stars, images, or FAQs) in search.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Off-Page SEO & Authority Building -->
+        <section class="terminology-section" id="authority">
+          <div class="section-header">
+            <div class="section-icon authority">🏆</div>
+            <h2 class="section-title">Off-Page SEO & Authority Building</h2>
+          </div>
+          <div class="terms-grid">
+            <div class="term-card" id="term-off-page-seo">
+              <div class="term-header">
+                <div class="term-icon">🌐</div>
+                <h3 class="term-name">Off-Page SEO</h3>
+              </div>
+              <p class="term-description">Off-page SEO focuses on what others say about your site. It includes backlinks and other signals of trust. While on-page SEO helps search engines understand your content, off-page SEO helps prove your site is worth trusting.</p>
+            </div>
+            <div class="term-card" id="term-backlinks">
+              <div class="term-header">
+                <div class="term-icon">🔗</div>
+                <h3 class="term-name">Backlinks</h3>
+              </div>
+              <p class="term-description">A backlink is a link from another website to your own. These links act like a recommendation, signaling that your content is valuable and trustworthy. Search engines view backlinks as a vote of confidence.</p>
+            </div>
+            <div class="term-card" id="term-link-building">
+              <div class="term-header">
+                <div class="term-icon">🔨</div>
+                <h3 class="term-name">Link Building</h3>
+              </div>
+              <p class="term-description">Link building is the process of getting more backlinks from other websites. Quality links from trusted sites are best for SEO.</p>
+            </div>
+            <div class="term-card" id="term-domain-authority">
+              <div class="term-header">
+                <div class="term-icon">🏅</div>
+                <h3 class="term-name">Domain Authority</h3>
+              </div>
+              <p class="term-description">Domain Authority is a score that predicts how well your website will rank on search engines. Higher authority usually means better rankings.</p>
+            </div>
+            <div class="term-card" id="term-page-authority">
+              <div class="term-header">
+                <div class="term-icon">📄</div>
+                <h3 class="term-name">Page Authority</h3>
+              </div>
+              <p class="term-description">Page Authority is a score that predicts how well a specific page will rank in search results. It’s similar to Domain Authority but for individual pages.</p>
+            </div>
+            <div class="term-card" id="term-trust-signals">
+              <div class="term-header">
+                <div class="term-icon">✅</div>
+                <h3 class="term-name">Trust Signals</h3>
+              </div>
+              <p class="term-description">Trust signals are features that show your site is reliable, like HTTPS, privacy policies, and positive reviews. They help build credibility with users and search engines.</p>
+            </div>
+            <div class="term-card" id="term-brand-mentions">
+              <div class="term-header">
+                <div class="term-icon">💬</div>
+                <h3 class="term-name">Brand Mentions</h3>
+              </div>
+              <p class="term-description">Brand mentions are when other sites talk about your brand, even if they don’t link to you. Search engines use these as a sign of your site’s reputation and authority.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bringing It All Together Section -->
+        <section class="terminology-section bringing-together">
+          <div class="section-header">
+            <div class="section-icon" style="background:linear-gradient(135deg,#6366f1 0%,#2563eb 100%);">🧩</div>
+            <h2 class="section-title">Bringing It All Together</h2>
+          </div>
+          <div style="max-width:700px;margin:0 auto 0.5rem auto;font-size:1.13rem;line-height:1.8;color:#174ea6;text-align:center;">
+            Learning all these terms may feel like a lot at first, and that is completely normal. You have probably already seen or heard many of them without realizing how they connect. Now that you have a clearer understanding, the pieces should start to fit together.
+          </div>
+        </section>
       </div>
-      <div style="border-bottom:1px solid #e0e3ef; width:60px; margin:0.2rem 0 1.5rem 0;"></div>
-      <div class="cta-final-block" style="padding:2.5rem 1.5rem 2.5rem 1.5rem; text-align:center; background:#f8faff; border-radius:1.5rem; margin-top:1.5rem; max-width:600px; margin-left:auto; margin-right:auto;">
-        <p style="font-size:1.13rem; line-height:1.8; color:#174ea6; font-style:italic; margin-bottom:2.2rem;">Learning all these terms may feel like a lot at first, and that is completely normal. You have probably already seen or heard many of them without realizing how they connect. Now that you have a clearer understanding, the pieces should start to fit together. <span style="font-weight:600;">With this foundation in place, you are ready to move from definitions to action. You can now begin building real SEO strategies with confidence.</span></p>
-        <a href="seo-strategy.html" class="cta" style="display:inline-block; font-size:1.13rem; padding:0.95em 2.2em; background:#1e40af; color:#fff; border-radius:2em; font-weight:600; box-shadow:0 2px 12px rgba(30,64,175,0.07); text-decoration:none; transition:background 0.18s;">Go to Strategy &rarr;</a>
+
+      <!-- CTA Section -->
+      <div class="cta-section" style="margin-top:3.5rem; text-align:center;">
+        <h2 class="cta-title" style="color:#fff !important;">Ready to Take Action?</h2>
+        <p class="cta-description" style="color:#fff !important;">With this foundation in place, you are ready to move from definitions to action. You can now begin building real SEO strategies with confidence.</p>
+        <a href="seo-strategy.html" class="cta-button" style="color:#fff !important;">Go to Strategy <span class="cta-arrow" style="color:#fff !important;">&rarr;</span></a>
       </div>
-    </section>
-  </section>
+    </div>
+  </div>
   <footer>
     <div class="footer-content">
-      <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+      <p style="color:#fff !important;">© 2024 SEO Learning Guide. All rights reserved.</p>
     </div>
   </footer>
+
+  <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="universal-features.js"></script>
 </body>
 </html> 

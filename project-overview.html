@@ -24,118 +24,567 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF302P8XBG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-RF302P8XBG');
     </script>
+    <style>
+      .project-overview-page {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #2D3748;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        font-size: 16px;
+      }
+      .hero-section {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding: 2.5rem 0 0 0;
+      }
+      .hero-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: clamp(2.2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        line-height: 1.2;
+        color: #fff !important;
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.02em;
+      }
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto 2rem auto;
+        font-weight: 500;
+      }
+      .main-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        min-height: calc(100vh - 80px);
+        background: transparent;
+        margin-top: 0;
+      }
+      .content-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: 0 4px 32px rgba(118,75,162,0.13);
+        margin-bottom: 2rem;
+      }
+      .section-header {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #223;
+        margin: 3rem 0 1.5rem 0;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      .section-header::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 2rem;
+        background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+        border-radius: 2px;
+      }
+      .content-text {
+        font-size: 1.0625rem;
+        line-height: 1.75;
+        color: #2D3748;
+        margin-bottom: 1.5rem;
+      }
+      .content-text:last-child {
+        margin-bottom: 0;
+      }
+      .structure-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .structure-card {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(79,124,255,0.08);
+        border: 1px solid #ede7f6;
+        transition: all 0.3s ease;
+      }
+      .structure-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(79,124,255,0.15);
+      }
+      .structure-card h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #4F7CFF;
+        margin-bottom: 0.5rem;
+      }
+      .structure-card p {
+        font-size: 0.9375rem;
+        color: #4A5568;
+        line-height: 1.6;
+      }
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .tool-card {
+        background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        padding: 2rem;
+        border-radius: 16px;
+        border: 2px solid #ede7f6;
+        transition: all 0.3s ease;
+      }
+      .tool-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(79,124,255,0.15);
+      }
+      .tool-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        color: white;
+      }
+      .tool-name {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #2D3748;
+        margin-bottom: 0.5rem;
+      }
+      .tool-description {
+        font-size: 0.9375rem;
+        color: #4A5568;
+        line-height: 1.6;
+      }
+      .highlight-box {
+        background: linear-gradient(135deg, #EBF4FF 0%, #E0E7FF 100%);
+        padding: 2rem;
+        border-radius: 20px;
+        margin: 2rem 0;
+        border-left: 5px solid #4F7CFF;
+      }
+      .highlight-box.success {
+        background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+        border-left-color: #10B981;
+      }
+      .highlight-box.warning {
+        background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+        border-left-color: #F59E0B;
+      }
+      .highlight-text {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #2D3748;
+        line-height: 1.7;
+      }
+      .styled-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .styled-list li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.0625rem;
+        line-height: 1.6;
+        color: #2D3748;
+      }
+      .styled-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: white;
+        font-weight: bold;
+      }
+      .keyword-examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      .keyword-tag {
+        background: linear-gradient(135deg, #F3E8FF 0%, #E9D5FF 100%);
+        color: #4F7CFF;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        border: 1px solid #C4B5FD;
+      }
+      .cta-section {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+        background: transparent;
+      }
+      .cta-title {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2.1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+      .cta-description {
+        font-size: 1.25rem;
+        line-height: 1.7;
+        max-width: 540px;
+        margin: 0 auto 2.5rem auto;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+        color: #fff !important;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.125rem;
+        box-shadow: 0 4px 15px rgba(79, 124, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(79, 124, 255, 0.4);
+      }
+      .cta-arrow {
+        font-size: 1.25rem;
+        transition: transform 0.3s ease;
+        color: #fff !important;
+      }
+      .cta-button:hover .cta-arrow {
+        transform: translateX(5px);
+      }
+      .footer {
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+      .footer p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.875rem;
+      }
+      @media (max-width: 768px) {
+        .main-container {
+          padding: 1rem;
+        }
+        .content-card {
+          padding: 2rem 1.5rem;
+        }
+        .hero-section {
+          padding: 2rem 1rem 0 1rem;
+        }
+        .navbar ul {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .structure-grid,
+        .tools-grid {
+          grid-template-columns: 1fr;
+        }
+        .keyword-examples {
+          flex-direction: column;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      *:focus {
+        outline: 3px solid rgba(79, 124, 255, 0.5);
+        outline-offset: 2px;
+      }
+    </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
+<body class="project-overview-page">
+  <header>
     <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-        <a href="/index.html" class="logo-link">
-            <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-        </a>
-        <ul>
-            <li><a href="why-seo-matters.html">Why SEO</a></li>
-            <li><a href="terminology.html">Terminology</a></li>
-            <li><a href="seo-strategy.html">Strategy</a></li>
-            <li><a href="start-a-project.html">Start a Project</a></li>
-            <li><a href="project-overview.html" class="active">Project Overview</a></li>
-            <li><a href="seo-blog.html">Blog</a></li>
-        </ul>
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="why-seo-matters.html">Why SEO</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="seo-strategy.html">Strategy</a></li>
+        <li><a href="start-a-project.html">Start a Project</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li><a href="seo-blog.html">Blog</a></li>
+      </ul>
     </nav>
+  </header>
+    <div class="hero-section">
+        <h1 class="hero-title">How I Built This SEO Project Step by Step</h1>
+        <p class="hero-subtitle">A complete walkthrough of building an SEO-optimized website from scratch, including tools, strategy, and lessons learned along the way</p>
+    </div>
+    <div class="main-container">
+        <div class="content-card">
+            <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:0.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Project Goals and Why I Did It</h2>
+            <p>This site is the result of a self-taught SEO project. I built everything from scratch to learn SEO by doing. Throughout the process, I focused on research, page structure, and applying real tools. The goal of this page is to walk you through each step I took, so if you're a beginner trying to start something similar, you can follow along and understand the thinking behind it. Along the way, I applied key SEO concepts in a real setting, turning what I learned into something practical and complete.</p>
+            <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Website Setup</h2>
+            <p>The site is structured into distinct sections, each with a clear purpose:</p>
+            <div class="structure-grid">
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="why-seo-matters.html" style="color:#4F7CFF;text-decoration:none;">Why SEO</a></h3>
+                    <p style="color:#4A5568;">Introduces the value of SEO and its role in building online visibility.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="terminology.html" style="color:#4F7CFF;text-decoration:none;">Terminology</a></h3>
+                    <p style="color:#4A5568;">Breaks down essential SEO terms into understandable explanations.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="seo-strategy.html" style="color:#4F7CFF;text-decoration:none;">Strategy</a></h3>
+                    <p style="color:#4A5568;">Shows how to turn concepts into action by focusing on keywords, structure, crawlability, and more.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="start-a-project.html" style="color:#4F7CFF;text-decoration:none;">Start a Project</a></h3>
+                    <p style="color:#4A5568;">Helps users take their first step by building an SEO-ready project using free tools.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="project-overview.html" style="color:#4F7CFF;text-decoration:none;">Project Overview</a></h3>
+                    <p style="color:#4A5568;">This page, which walks through the technical and creative steps I followed.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;">
+                    <h3 style="color:#4F7CFF;font-weight:700;"><a href="seo-blog.html" style="color:#4F7CFF;text-decoration:none;">Blog</a></h3>
+                    <p style="color:#4A5568;">Shares posts that target specific SEO topics using keyword strategy and internal links.</p>
+                </div>
+            </div>
+            <h2 class="section-header">Tools Used</h2>
+            <div class="tools-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">💻</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://www.cursor.com/" target="_blank" style="color:#4F7CFF;text-decoration:none;">Cursor</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">I built the entire site using Cursor, a free AI-powered code editor. It helped me write and organize my HTML, embed SEO tags, and improve structure. Cursor also integrates seamlessly with GitHub, allowing me to upload my code and host the site without needing to buy a domain.</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">🌐</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://pages.github.com/" target="_blank" style="color:#4F7CFF;text-decoration:none;">GitHub Pages</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">I used GitHub Pages to publish my site for free. It connects with Cursor and makes it easy to deploy updates.</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">📊</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://analytics.google.com/analytics/web/" target="_blank" style="color:#4F7CFF;text-decoration:none;">Google Analytics (GA4)</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">I linked my site to Google Analytics to track site performance and user behavior over time.</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">🔍</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://search.google.com/search-console/" target="_blank" style="color:#4F7CFF;text-decoration:none;">Google Search Console</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">After completing my content and adding SEO elements like title tags and alt text, I submitted my site to Google Search Console to help it get indexed and monitored.</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">🤖</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://claude.ai/login?returnTo=%2F%3F" target="_blank" style="color:#4F7CFF;text-decoration:none;">Claude</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">Used Claude to generate design-based code suggestions that I adapted in Cursor. It helped inspire cleaner layouts and improve overall page structure and readability.</p>
+                </div>
+            </div>
+            <h2 class="section-header">Technical Setup Details</h2>
+            <div class="structure-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">SEO Meta Tags</h3>
+                    <p style="color:#4A5568;">Added SEO-friendly title tags and meta descriptions to each page.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Heading Structure</h3>
+                    <p style="color:#4A5568;">Used proper heading structure, with H1 for main titles and H2 for subheads, across all content.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Image Optimization</h3>
+                    <p style="color:#4A5568;">Optimized image file names and alt text for accessibility and SEO.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Mobile & Performance</h3>
+                    <p style="color:#4A5568;">Ensured the site was mobile-friendly and fast-loading.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Sitemap Submission</h3>
+                    <p style="color:#4A5568;">Submitted the sitemap to Google Search Console for indexing.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Internal Linking</h3>
+                    <p style="color:#4A5568;">Set up basic internal links between major sections for navigation and crawlability.</p>
+                </div>
+            </div>
+            <h2 class="section-header">Keyword Strategy Breakdown</h2>
+            <p class="content-text">I focused on choosing relevant keywords that matched what people are actually searching for. These keywords helped shape the direction of my pages and made it easier for search engines to understand what the content was about.</p>
+            
+            <div class="highlight-box">
+                <p class="highlight-text">To find strong keyword ideas, I used a combination of free tools and manual research methods.</p>
+            </div>
 
-    <section class="section-content" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px rgba(59,77,138,0.07); max-width:820px; margin:2.5rem auto 3.5rem auto; padding:2.2rem 1.5rem 2.7rem 1.5rem; font-family:inherit; line-height:1.6;">
-      <h1 style="color:#174ea6; font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:1.7rem; letter-spacing:-0.02em;">How I Built This SEO Project Step by Step</h1>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Project Goals and Why I Did It</h2>
-      <p>This site is the result of a self-taught SEO project. I built everything from scratch to learn SEO by doing. Throughout the process, I focused on research, page structure, and applying real tools. The goal of this page is to walk you through each step I took, so if you're a beginner trying to start something similar, you can follow along and understand the thinking behind it. Along the way, I applied key SEO concepts in a real setting, turning what I learned into something practical and complete.</p>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Website Setup</h2>
-      <p>The site is structured into distinct sections, each with a clear purpose:</p>
-      <ul style="margin-bottom:2rem;">
-        <li style="margin-bottom:1.3rem;"><a href="why-seo-matters.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Why SEO</a> – Introduces the value of SEO and its role in building online visibility.</li>
-        <li style="margin-bottom:1.3rem;"><a href="terminology.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Terminology</a> – Breaks down essential SEO terms into understandable explanations.</li>
-        <li style="margin-bottom:1.3rem;"><a href="seo-strategy.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Strategy</a> – Shows how to turn concepts into action by focusing on keywords, structure, crawlability, and more.</li>
-        <li style="margin-bottom:1.3rem;"><a href="start-a-project.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Start a Project</a> – Helps users take their first step by building an SEO-ready project using free tools.</li>
-        <li style="margin-bottom:1.3rem;"><a href="project-overview.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Project Overview</a> – This page, which walks through the technical and creative steps I followed.</li>
-        <li style="margin-bottom:1.3rem;"><a href="seo-blog.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">Blog</a> – Shares posts that target specific SEO topics using keyword strategy and internal links.</li>
-      </ul>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Tools Used</h2>
-      <ul>
-        <li><a href="https://www.cursor.com/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">Cursor</a>: I built the entire site using Cursor, a free AI-powered code editor. It helped me write and organize my HTML, embed SEO tags, and improve structure. Cursor also integrates seamlessly with GitHub, allowing me to upload my code and host the site without needing to buy a domain.</li>
-        <li><a href="https://pages.github.com/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">GitHub Pages</a>: I used GitHub Pages to publish my site for free. It connects with Cursor and makes it easy to deploy updates.</li>
-        <li><a href="https://analytics.google.com/analytics/web/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">Google Analytics (GA4)</a>: I linked my site to Google Analytics to track site performance and user behavior over time.</li>
-        <li><a href="https://search.google.com/search-console/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">Google Search Console</a>: After completing my content and adding SEO elements like title tags and alt text, I submitted my site to Google Search Console to help it get indexed and monitored.</li>
-      </ul>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Technical Setup Details</h2>
-      <ul>
-        <li>Added SEO-friendly title tags and meta descriptions to each page.</li>
-        <li>Used proper heading structure, with H1 for main titles and H2 for subheads, across all content.</li>
-        <li>Optimized image file names and alt text for accessibility and SEO.</li>
-        <li>Ensured the site was mobile-friendly and fast-loading.</li>
-        <li>Submitted the sitemap to Google Search Console for indexing.</li>
-        <li>Set up basic internal links between major sections for navigation and crawlability.</li>
-      </ul>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Keyword Strategy Breakdown</h2>
-      <p>I focused on choosing relevant keywords that matched what people are actually searching for. These keywords helped shape the direction of my pages and made it easier for search engines to understand what the content was about.</p>
-      <p>To find strong keyword ideas, I used:</p>
-      <ul style="margin-bottom:2rem;">
-        <li style="margin-bottom:1.1rem;"><a href="https://neilpatel.com/ubersuggest/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">Ubersuggest</a> – to check search volume, competition, and keyword suggestions</li>
-        <li style="margin-bottom:1.1rem;"><a href="https://www.google.com/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">Google Autocomplete</a> – start typing a query in the search bar to see real user search suggestions</li>
-        <li style="margin-bottom:1.1rem;"><a href="https://answerthepublic.com/" target="_blank" style="color:#174ea6; font-weight:600; text-decoration:underline;">AnswerThePublic</a> – to explore question-based keyword ideas and topic clusters based on search behavior</li>
-      </ul>
-      <p>Once selected, the keywords were used naturally across the site, including:</p>
-      <ul style="margin-bottom:2rem;">
-        <li style="margin-bottom:1.1rem;">Page titles and headings</li>
-        <li style="margin-bottom:1.1rem;">Meta descriptions</li>
-        <li style="margin-bottom:1.1rem;">Body content on main pages</li>
-        <li style="margin-bottom:1.1rem;">Blog posts focused on SEO education</li>
-      </ul>
-      <p>Examples of keywords used:</p>
-      <ul style="margin-bottom:2rem;">
-        <li style="margin-bottom:1.1rem;"><em>How to write a strong title tag</em></li>
-        <li style="margin-bottom:1.1rem;"><em>Search intent in SEO</em></li>
-        <li style="margin-bottom:1.1rem;"><em>Beginner SEO tips for small websites</em></li>
-      </ul>
-      <p>These keywords supported the overall goal of helping people find useful, beginner-friendly SEO guidance and improving how search engines rank the site.</p>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Building Value Through Content</h2>
-      <p>To bring the strategy to life, I created a <a href="seo-blog.html" style="color:#174ea6; font-weight:600; text-decoration:underline;">blog section</a>. These posts serve multiple goals:</p>
-      <ul style="margin-bottom:2rem;">
-        <li>Help educate site visitors.</li>
-        <li>Cover specific SEO topics like AI, title tags, and search trends.</li>
-        <li>Improve internal linking between site pages.</li>
-        <li>Support keyword targeting based on real search data.</li>
-      </ul>
-      <p>Each blog post was built around keyword research, answering real questions people search for while supporting the overall site structure.</p>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Skills Learned Through the Project</h2>
-      <p>This project gave me the chance to build and refine practical SEO skills by applying real tools and techniques throughout the entire process. Instead of just reading about concepts, I gained hands-on experience that helped me understand how SEO works in action.</p>
-      <p>Some of the core skills I developed include:</p>
-      <ul style="margin-bottom:2rem;">
-        <li style="margin-bottom:1.1rem;">Understanding Google Search Console. I learned how to submit a site for indexing, monitor crawl status, and identify how Google views each page.</li>
-        <li style="margin-bottom:1.1rem;">Using Google Analytics (GA4). I set up tracking to evaluate how users interact with the site, measure performance, and interpret key metrics like page views and engagement time.</li>
-        <li style="margin-bottom:1.1rem;">Keyword discovery and planning. Using tools like Ubersuggest and Google Autocomplete, I learned how to find relevant keywords and map them to specific content needs.</li>
-        <li style="margin-bottom:1.1rem;">Writing SEO-optimized content. I practiced embedding keywords naturally in titles, descriptions, and content without affecting readability.</li>
-        <li style="margin-bottom:1.1rem;">Navigating Cursor. I used Cursor to write clean HTML, add metadata, and format sections with visual clarity — all with helpful AI guidance.</li>
-        <li style="margin-bottom:1.1rem;">Internal linking strategy. I linked pages logically to improve both user navigation and how search engines understand the site structure.</li>
-        <li style="margin-bottom:1.1rem;">Page structure and accessibility. I added alt text, used clear headings, and followed best practices to make pages easy to read and crawl.</li>
-      </ul>
-      <p>This hands-on approach helped me move from basic understanding to real-world execution. I now feel more confident using SEO tools, structuring content for visibility, and managing an entire project from the ground up.</p>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">View My Project Code</h2>
-      <p>If you want to explore the code behind this site, <a href="https://github.com/Nolstern/nolstern.github.io" target="_blank" style="color:#174ea6; text-decoration:underline; font-weight:800; letter-spacing:1px; font-size:1.08em;"><strong>CLICK HERE</strong></a>.<br></p>
-      <h2 style="color:#223; font-size:1.35rem; font-weight:700; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Still Want to Learn More?</h2>
-      <p>Explore the blog for more up-to-date SEO tips, trends, and beginner-friendly breakdowns.</p>
-      <a href="seo-blog.html" class="cta" style="display:inline-block; font-size:1.13rem; padding:0.95em 2.2em; background:#1e40af; color:#fff; border-radius:2em; font-weight:600; box-shadow:0 2px 12px rgba(30,64,175,0.07); text-decoration:none; transition:background 0.18s;">Continue to Blog &rarr;</a>
-    </section>
+            <p class="content-text">My keyword research toolkit included:</p>
+            <div class="tools-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">📊</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://neilpatel.com/ubersuggest/" target="_blank" style="color:#4F7CFF;text-decoration:none;">Ubersuggest</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">To check search volume, competition, and keyword suggestions</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">🔍</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://www.google.com/" target="_blank" style="color:#4F7CFF;text-decoration:none;">Google Autocomplete</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">Start typing a query in the search bar to see real user search suggestions</p>
+                </div>
+                <div class="tool-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <div class="tool-icon" style="width:50px;height:50px;background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.5rem;color:white;">💡</div>
+                    <h3 class="tool-name" style="color:#223;font-weight:700;margin-bottom:0.5rem;"><a href="https://answerthepublic.com/" target="_blank" style="color:#4F7CFF;text-decoration:none;">AnswerThePublic</a></h3>
+                    <p class="tool-description" style="color:#4A5568;font-size:0.9375rem;line-height:1.6;">To explore question-based keyword ideas and topic clusters based on search behavior</p>
+                </div>
+            </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+            <p class="content-text">Once selected, the keywords were used naturally across the site, including:</p>
+            <div class="structure-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Page Titles & Headings</h3>
+                    <p style="color:#4A5568;">Strategic keyword placement in main page titles and section headings</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Meta Descriptions</h3>
+                    <p style="color:#4A5568;">Compelling descriptions that include target keywords for search results</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Body Content</h3>
+                    <p style="color:#4A5568;">Natural keyword integration throughout main page content</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Blog Posts</h3>
+                    <p style="color:#4A5568;">Focused content targeting specific SEO education keywords</p>
+                </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#f8fafc 0%,#e9d5ff 100%); border-radius:16px; padding:1.2rem 1.5rem; margin:2.2rem 0 2rem 0; box-shadow:0 2px 12px rgba(79,124,255,0.07);">
+  <div style="font-weight:700; color:#111; margin-bottom:0.7rem; font-size:1.08rem; text-align:center;">Examples of keywords used:</div>
+  <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:0.7rem;">
+    <span style="background:#fff; color:#111; padding:0.6rem 1.2rem; border-radius:20px; font-size:1rem; font-weight:600; border:1px solid #E0E7EF;">learn SEO step by step</span>
+    <span style="background:#fff; color:#111; padding:0.6rem 1.2rem; border-radius:20px; font-size:1rem; font-weight:600; border:1px solid #E0E7EF;">how to start SEO for beginners</span>
+    <span style="background:#fff; color:#111; padding:0.6rem 1.2rem; border-radius:20px; font-size:1rem; font-weight:600; border:1px solid #E0E7EF;">how long does it take to learn SEO</span>
+    <span style="background:#fff; color:#111; padding:0.6rem 1.2rem; border-radius:20px; font-size:1rem; font-weight:600; border:1px solid #E0E7EF;">can I teach myself SEO</span>
+  </div>
+</div>
+            <p>These keywords supported the overall goal of helping people find useful, beginner-friendly SEO guidance and improving how search engines rank the site.</p>
+            <h2 class="section-header">Building Value Through Content</h2>
+            <p class="content-text">To bring the strategy to life, I created a <a href="seo-blog.html">blog section</a>. These posts serve multiple goals:</p>
+            <div class="structure-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Education</h3>
+                    <p style="color:#4A5568;">Help educate site visitors with valuable, actionable content</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Topic Coverage</h3>
+                    <p style="color:#4A5568;">Cover specific SEO topics like AI, title tags, and search trends</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Internal Linking</h3>
+                    <p style="color:#4A5568;">Improve internal linking between site pages for better navigation</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Keyword Targeting</h3>
+                    <p style="color:#4A5568;">Support keyword targeting based on real search data and user intent</p>
+                </div>
+            </div>
+            <p>Each blog post was built around keyword research, answering real questions people search for while supporting the overall site structure.</p>
+            <h2 class="section-header">Skills Learned Through the Project</h2>
+            <p class="content-text">This project gave me the chance to build and refine practical SEO skills by applying real tools and techniques throughout the entire process. Instead of just reading about concepts, I gained hands-on experience that helped me understand how SEO works in action.</p>
+            
+            <div class="highlight-box success">
+                <p class="highlight-text">The hands-on approach was key to moving from basic understanding to real-world execution.</p>
+            </div>
+
+            <p class="content-text">Some of the core skills I developed include:</p>
+            <div class="structure-grid" style="display:block;grid-template-columns:none;gap:0;">
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Google Search Console</h3>
+                    <p style="color:#4A5568;">I learned how to submit a site for indexing, monitor crawl status, and identify how Google views each page.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Google Analytics (GA4)</h3>
+                    <p style="color:#4A5568;">I set up tracking to evaluate how users interact with the site, measure performance, and interpret key metrics like page views and engagement time.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Keyword Discovery</h3>
+                    <p style="color:#4A5568;">Using tools like Ubersuggest and Google Autocomplete, I learned how to find relevant keywords and map them to specific content needs.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">SEO Content Writing</h3>
+                    <p style="color:#4A5568;">I practiced embedding keywords naturally in titles, descriptions, and content without affecting readability.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">AI-Assisted Development</h3>
+                    <p style="color:#4A5568;">I used Cursor, Claude, and ChatGPT to write clean HTML, add metadata, and improve layout structure. These AI tools also supported troubleshooting and helped refine formatting and page flow for better clarity and usability.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Internal Linking</h3>
+                    <p style="color:#4A5568;">I linked pages logically to improve both user navigation and how search engines understand the site structure.</p>
+                </div>
+                <div class="structure-card" style="background:#ffffff;border:2px solid #e2e8f0;box-shadow:0 8px 25px rgba(118,75,162,0.15);border-radius:16px;padding:1.5rem;width:100%;margin-bottom:1.5rem;">
+                    <h3 style="color:#223;font-weight:700;">Page Structure & Accessibility</h3>
+                    <p style="color:#4A5568;">I added alt text, used clear headings, and followed best practices to make pages easy to read and crawl.</p>
+                </div>
+            </div>
+            <p>This hands-on approach helped me move from basic understanding to real-world execution. I now feel more confident using SEO tools, structuring content for visibility, and managing an entire project from the ground up.</p>
+            <!-- BEGIN: View My Project Code Section -->
+<div id="view-project-code-section" style="background:#fff; border-radius:20px; box-shadow:0 4px 24px rgba(79,124,255,0.10); padding:2.2rem 1.5rem; margin:2.5rem 0; text-align:center; color:#223;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1.1rem; letter-spacing:-0.01em; color:#4F7CFF;">View My Project Code</h2>
+  <p style="font-size:1.08rem; margin-bottom:2rem; opacity:0.95;">If you want to explore the code behind this site, just click below.</p>
+  <a href="https://github.com/Nolstern/nolstern.github.io" target="_blank" style="display:inline-block; background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%); color:#fff; font-weight:700; font-size:1.1rem; padding:0.9rem 2.2rem; border-radius:50px; text-decoration:none; box-shadow:0 2px 12px rgba(79,124,255,0.13); transition:background 0.2s, color 0.2s;">
+    <i class="fab fa-github" style="margin-right:0.7rem;"></i> CLICK HERE
+  </a>
+</div>
+<!-- END: View My Project Code Section -->
         </div>
+        <div class="cta-section">
+            <h2 class="cta-title">Still Want to Learn More?</h2>
+            <p class="cta-description">Explore the blog for more up-to-date SEO tips, trends, and beginner-friendly breakdowns.</p>
+            <a href="seo-blog.html" class="cta-button">
+                Continue to Blog
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2024 SEO Learning Guide. All rights reserved.</p>
     </footer>
+
+    <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="universal-features.js"></script>
 </body>
 </html> 

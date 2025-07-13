@@ -31,180 +31,494 @@
     gtag('config', 'G-RF302P8XBG');
   </script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    .blog-page {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #2D3748;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      font-size: 16px;
+    }
+    .hero-section {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding: 2.5rem 0 0 0;
+    }
+    .hero-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #fff !important;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      font-weight: 500;
+    }
+    .main-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      min-height: calc(100vh - 80px);
+      background: transparent;
+      margin-top: 0;
+    }
+    .content-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 4px 32px rgba(118,75,162,0.13);
+      margin-bottom: 2rem;
+    }
+    .filter-section {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 32px rgba(118,75,162,0.13);
+      border: 1px solid rgba(79, 124, 255, 0.1);
+    }
+    .filter-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 2px solid rgba(79, 124, 255, 0.2);
+      color: #4A5568;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+    .filter-btn:hover {
+      border-color: #4F7CFF;
+      color: #4F7CFF;
+      transform: translateY(-2px);
+    }
+    .filter-btn.active {
+      background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(79, 124, 255, 0.3);
+    }
+    .search-input {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid rgba(79, 124, 255, 0.2);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: inherit;
+      min-width: 200px;
+      transition: border-color 0.3s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #4F7CFF;
+    }
+    .search-input::placeholder {
+      color: #718096;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(118,75,162,0.13);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(79, 124, 255, 0.1);
+      position: relative;
+    }
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+    }
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(118,75,162,0.2);
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+    .card-content {
+      padding: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .category-tag {
+      display: inline-block;
+      background: rgba(79, 124, 255, 0.1);
+      color: #4F7CFF;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .blog-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #2D3748;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .read-time {
+      color: #718096;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .blog-desc {
+      color: #4A5568;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .read-more {
+      background: linear-gradient(135deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+      font-family: inherit;
+    }
+    .read-more:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(79, 124, 255, 0.3);
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    .footer p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.875rem;
+    }
+    @media (max-width: 768px) {
+      .main-container {
+        padding: 1rem;
+      }
+      .content-card {
+        padding: 2rem 1.5rem;
+      }
+      .hero-section {
+        padding: 2rem 1rem 0 1rem;
+      }
+      .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .filter-controls {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .filter-section {
+        padding: 1.5rem;
+      }
+      .card-content {
+        padding: 1.5rem;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    *:focus {
+      outline: 3px solid rgba(79, 124, 255, 0.5);
+      outline-offset: 2px;
+    }
+  </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="/index.html" class="logo-link">
-      <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-    </a>
-    <ul>
-      <li><a href="why-seo-matters.html">Why SEO</a></li>
-      <li><a href="terminology.html">Terminology</a></li>
-      <li><a href="seo-strategy.html">Strategy</a></li>
-      <li><a href="start-a-project.html">Start a Project</a></li>
-      <li><a href="project-overview.html">Project Overview</a></li>
-      <li><a href="seo-blog.html" class="active">Blog</a></li>
-    </ul>
-  </nav>
-  <section class="section-content">
-    <h1 style="color:#174ea6; font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:2rem; letter-spacing:-0.02em;">SEO Blog – Stay Up to Date with Trends in Digital Marketing</h1>
-    <p style="line-height:1.8; color:#3b4a6b;">
-This blog explores how digital strategy, search trends, and tools like AI and Google Analytics are shaping the way people find content online. Whether it's about algorithm updates or content structure, each post focuses on practical takeaways that help make sense of where SEO is headed.
-    </p>
-    <div class="blog-filters" style="display:flex;gap:1rem;align-items:center;justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap;">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="seo">SEO</button>
-      <button class="filter-btn" data-filter="google-analytics">Google Analytics</button>
-      <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
-      <button class="filter-btn" data-filter="ai">AI</button>
-      <input type="text" id="blogSearch" placeholder="Search posts..." style="margin-left:1rem;padding:0.5rem 1rem;border-radius:8px;border:1px solid #e0e3ef;font-size:1rem;min-width:180px;">
+<body class="blog-page">
+  <header>
+    <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="why-seo-matters.html">Why SEO</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="seo-strategy.html">Strategy</a></li>
+        <li><a href="start-a-project.html">Start a Project</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li><a href="seo-blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="progress-bar"></div>
+  
+  <div class="hero-section">
+    <h1 class="hero-title">SEO Blog</h1>
+    <p class="hero-subtitle">Stay current with the latest trends in search engine optimization, Google updates, and AI-powered digital marketing strategies</p>
+  </div>
+  
+  <div class="main-container">
+    <div class="filter-section">
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All Posts</button>
+        <button class="filter-btn" data-filter="seo">SEO</button>
+        <button class="filter-btn" data-filter="google-analytics">Analytics</button>
+        <button class="filter-btn" data-filter="digital-marketing">Marketing</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <input type="text" id="blogSearch" placeholder="Search articles..." class="search-input">
+      </div>
     </div>
+
     <div class="blog-grid">
       <div class="blog-card" data-category="seo">
         <a href="blog/best-way-to-learn-seo.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">SEO</div>
             <h3 class="blog-title">The Best Way to Learn SEO in 2025 – What Actually Works for Beginners</h3>
             <p class="read-time">🕒 4 min read</p>
             <p class="blog-desc">Trying to learn SEO in 2025? This guide compares the best ways to get started and explains why real projects help beginners learn faster and more effectively.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="ai">
         <a href="blog/mastering-aeo-2025.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">AI</div>
             <h3 class="blog-title">Mastering AEO for SEO in 2025 – A Beginner's Guide to AI Summaries</h3>
             <p class="read-time">🕒 5 min read</p>
             <p class="blog-desc">Beginner-friendly guide to Answer Engine Optimization (AEO) and how to format your content to rank in Google's AI Overviews using real-world keyword techniques.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="seo">
         <a href="blog/june-core-update-2025.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">SEO</div>
             <h3 class="blog-title">The June 2025 Google Core Update: What Beginners Should Watch For</h3>
             <p class="read-time">🕒 4 min read</p>
             <p class="blog-desc">A plain-English breakdown of the latest Google update, what changed, and how to keep your SEO strategy on track.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="seo">
         <a href="blog/internal-linking-ai.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">SEO</div>
             <h3 class="blog-title">Internal Linking for SEO in 2025 – Why It Still Matters in an AI-Driven World</h3>
             <p class="read-time">🕒 3 min read</p>
             <p class="blog-desc">How internal links help both users and AI-powered search engines understand your site's structure and value.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="google-analytics">
         <a href="blog/ga4-seo-tracking.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">Analytics</div>
             <h3 class="blog-title">GA4 SEO Tracking for Beginners – How to Measure What Really Matters</h3>
             <p class="read-time">🕒 5 min read</p>
             <p class="blog-desc">How to use Google Analytics 4 to track the SEO metrics that actually matter for beginners and small sites.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="digital-marketing">
         <a href="blog/micro-influencers-seo.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">Marketing</div>
             <h3 class="blog-title">How Micro-Influencers Support SEO Strategy in 2025</h3>
             <p class="read-time">🕒 4 min read</p>
             <p class="blog-desc">Why micro-influencers are the new secret weapon for building trust, links, and reach in modern SEO.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="digital-marketing">
         <a href="blog/salesforce-ai-marketing.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">Marketing</div>
             <h3 class="blog-title">What Salesforce's AI Marketing Strategy Can Teach SEO Beginners in 2025</h3>
             <p class="read-time">🕒 3 min read</p>
             <p class="blog-desc">Lessons from Salesforce's AI-powered marketing and what it means for digital marketers and SEOs in 2025.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="seo">
         <a href="blog/ai-mode-seo-2025.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">SEO</div>
             <h3 class="blog-title">Google AI Mode and SEO in 2025 – How to Stay Visible in Search</h3>
             <p class="read-time">🕒 6 min read</p>
             <p class="blog-desc">Google's new AI Mode is transforming how people search — and how websites need to rank. This blog explores what AI Mode is, why it matters for SEO, and how beginners can adapt their strategies to stay visible online.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
+
       <div class="blog-card" data-category="seo">
         <a href="blog/how-long-to-learn-seo.html" class="card-link">
           <div class="card-content">
+            <div class="category-tag">SEO</div>
             <h3 class="blog-title">How Long Does It Take to Learn SEO in 2025 – A Beginner's Timeline</h3>
             <p class="read-time">🕒 3 min read</p>
             <p class="blog-desc">Wondering how long it takes to learn SEO? This post breaks down the timeline for beginners and shows how to move from first steps to real confidence.</p>
-            <button class="read-more">Read More</button>
+            <button class="read-more">Read Article</button>
           </div>
         </a>
       </div>
     </div>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Mastering AEO: How to Structure Content for AI Summaries",
-      "author": {
-        "@type": "Person",
-        "name": "Nolan Stern"
-      },
-      "datePublished": "2025-06-19",
-      "publisher": {
-        "@type": "Organization",
-        "name": "SEO Guide Blog"
-      },
-      "keywords": [
-        "answer engine optimization",
-        "answer engine optimization aeo",
-        "optimize content for seo",
-        "optimization ai",
-        "how to optimize content"
-      ],
-      "description": "A beginner's guide to Answer Engine Optimization (AEO), with tips for structuring your content to be picked up in Google's AI Overviews and how to optimize for AEO-related keywords.",
-      "mainEntityOfPage": "https://nolstern.github.io/blog/mastering-aeo-2025.html"
-    }
-    </script>
-    <script>
-    const buttons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.blog-card');
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+  </footer>
+
+  <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="universal-features.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Mastering AEO: How to Structure Content for AI Summaries",
+    "author": {
+      "@type": "Person",
+      "name": "Nolan Stern"
+    },
+    "datePublished": "2025-06-19",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SEO Guide Blog"
+    },
+    "keywords": [
+      "answer engine optimization",
+      "answer engine optimization aeo",
+      "optimize content for seo",
+      "optimization ai",
+      "how to optimize content"
+    ],
+    "description": "A beginner's guide to Answer Engine Optimization (AEO), with tips for structuring your content to be picked up in Google's AI Overviews and how to optimize for AEO-related keywords.",
+    "mainEntityOfPage": "https://nolstern.github.io/blog/mastering-aeo-2025.html"
+  }
+  </script>
+
+  <script>
+    // Filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
     const searchInput = document.getElementById('blogSearch');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const category = btn.dataset.filter;
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        cards.forEach(card => {
-          const match = card.dataset.category === category || category === 'all';
-          card.style.display = match ? 'block' : 'none';
+
+    // Filter by category
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.filter;
+        
+        // Update active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Filter cards
+        blogCards.forEach(card => {
+          const cardCategory = card.dataset.category;
+          const shouldShow = category === 'all' || cardCategory === category;
+          
+          if (shouldShow) {
+            card.style.display = 'block';
+            // Add animation
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 100);
+          } else {
+            card.style.display = 'none';
+          }
         });
       });
     });
-    searchInput.addEventListener('keyup', () => {
-      const val = searchInput.value.toLowerCase();
-      cards.forEach(card => {
-        const content = card.textContent.toLowerCase();
-        card.style.display = content.includes(val) ? 'block' : 'none';
+
+    // Search functionality
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      
+      blogCards.forEach(card => {
+        const title = card.querySelector('.blog-title').textContent.toLowerCase();
+        const description = card.querySelector('.blog-desc').textContent.toLowerCase();
+        const category = card.querySelector('.category-tag').textContent.toLowerCase();
+        
+        const matchesSearch = title.includes(searchTerm) || 
+                            description.includes(searchTerm) || 
+                            category.includes(searchTerm);
+        
+        if (matchesSearch) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
       });
     });
-    </script>
-  </section>
-  <footer>
-    <div class="footer-content">
-      <p>© 2024 SEO Learning Guide. All rights reserved.</p>
-    </div>
-  </footer>
+
+    // Add smooth transitions
+    blogCards.forEach(card => {
+      card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    });
+  </script>
 </body>
 </html> 

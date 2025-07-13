@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="MknbmJBDNangu88j7OwNWTLzEHEZCKB-opbgWcwHLNk" />
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beginner SEO Strategy Guide</title>
   <meta name="description" content="Learn how to create an effective SEO strategy from scratch. Discover keyword research, content optimization, and technical SEO techniques for beginners.">
+  <meta name="google-site-verification" content="MknbmJBDNangu88j7OwNWTLzEHEZCKB-opbgWcwHLNk" />
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="/seo-strategy.html" />
   
   <!-- Open Graph / Facebook -->
@@ -31,160 +31,439 @@
 
   gtag('config', 'G-RF302P8XBG');
 </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body {
+      overflow-x: hidden !important;
+    }
+    body.strategy-page {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    }
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: #2563eb;
+      z-index: 1000;
+      transition: width 0.3s ease;
+    }
+    .main-container {
+      background: none !important;
+      width: 100%;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+    .strategy-container {
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(59,77,138,0.12);
+      overflow: hidden;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .strategy-page {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .strategy-intro-hero {
+      max-width: 950px;
+      margin: 2.5rem auto 0 auto;
+      text-align: center;
+      color: #fff;
+      padding: 0 1.5rem;
+    }
+    .strategy-intro-hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .strategy-intro-hero p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    .strategy-unified-bg {
+      background: #f4f6fb;
+      min-height: 100vh;
+      padding: 3rem 0;
+    }
+    .strategy-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(59,77,138,0.12);
+      overflow: hidden;
+    }
+    .strategy-section {
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .strategy-section:last-child {
+      border-bottom: none;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .section-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #174ea6;
+      margin: 0;
+    }
+    .strategy-content {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #3b4a6b;
+      margin-bottom: 1.5rem;
+    }
+    .strategy-list {
+      margin: 1.5rem 0;
+    }
+    .strategy-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .strategy-list li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: bold;
+    }
+    .strategy-list li strong {
+      color: #174ea6;
+    }
+    .info-box {
+      background: linear-gradient(135deg, #f8faff 0%, #e3f2fd 100%);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 4px solid #2563eb;
+    }
+    .info-box-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .info-box-icon {
+      color: #2563eb;
+      font-size: 1.3rem;
+    }
+    .info-box-title {
+      font-weight: 700;
+      color: #174ea6;
+      margin: 0;
+    }
+    .info-box-content {
+      color: #3b4a6b;
+      line-height: 1.6;
+    }
+    .info-box-content ul {
+      margin: 0.5rem 0 0 1.5rem;
+    }
+    .info-box-content li {
+      margin-bottom: 0.5rem;
+    }
+    .strategy-highlight {
+      background: #fff8e1;
+      border: 1px solid #ffd54f;
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+      font-weight: 600;
+      color: #e65100;
+    }
+    .cta-final-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .cta-final-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .cta-final-section p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #fff;
+      color: #174ea6;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .cta-arrow {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .cta-button:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+    /* Remove sticky/fixed from navbar if present */
+    .navbar {
+      position: static !important;
+      top: unset !important;
+      z-index: unset !important;
+    }
+  </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="/index.html" class="logo-link">
-      <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-    </a>
-    <ul>
-      <li><a href="why-seo-matters.html">Why SEO</a></li>
-      <li><a href="terminology.html">Terminology</a></li>
-      <li><a href="seo-strategy.html" class="active">Strategy</a></li>
-      <li><a href="start-a-project.html">Start a Project</a></li>
-      <li><a href="project-overview.html">Project Overview</a></li>
-      <li><a href="seo-blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <section class="section-content" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px rgba(59,77,138,0.07); max-width:820px; margin:2.5rem auto 3.5rem auto; padding:2.2rem 1.5rem 2.7rem 1.5rem; font-family:inherit; line-height:1.6;">
-    <h1 style="color:#174ea6; font-size:2.2rem; font-weight:800; text-align:center; margin-bottom:2rem; letter-spacing:-0.02em;">Learn SEO Step by Step with a Beginner Strategy</h1>
-    <p style="line-height:1.8; color:#3b4a6b;">
-      Learning SEO step by step means moving from definitions to application. This section walks you through beginner SEO strategy in a clear, practical way so you can start optimizing your content with confidence and intent.
-    </p>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Keyword Basics</h2>
-      <p>You already know what keywords are. Now let's look at how to use them effectively. SEO is not about stuffing your site with random search terms. It is about choosing the right keywords and placing them with purpose.</p>
-      <p>For example, if you are selling wireless headphones, you might think the word <em>headphones</em> should appear throughout your site. But that term is highly competitive. Large retailers dominate those results. Even if you use the keyword, your page is unlikely to appear near the top.</p>
-      <p>That is why strategy matters. Different keyword types play different roles:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Short-tail keywords</strong> are broad terms like "headphones" <span style="color:#3b4a6b;">(these get high search volume but are highly competitive)</span>.</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Long-tail keywords</strong> are more specific phrases like "best wireless headphones for workouts" or "waterproof black earbuds for swimming" <span style="color:#3b4a6b;">(easier to rank for and match searcher intent)</span>.</li>
+<body class="strategy-page" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+  <header>
+    <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
+      <a href="index.html" class="logo-link">
+        <img src="Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="why-seo-matters.html">Why SEO</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+        <li><a href="seo-strategy.html">Strategy</a></li>
+        <li><a href="start-a-project.html">Start a Project</a></li>
+        <li><a href="project-overview.html">Project Overview</a></li>
+        <li><a href="seo-blog.html">Blog</a></li>
       </ul>
-      <p>A strong strategy uses a mix of both. Short-tail keywords can boost visibility. Long-tail keywords help attract more targeted traffic.</p>
-      <p style="font-weight:600; margin-top:1.5rem;">Where to use your keywords:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Page titles</strong> (show the topic clearly)</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Headings (H1, H2)</strong> (help with structure and understanding)</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>URL</strong> (keeps the web address relevant)</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>First paragraph</strong> (sets the tone for both users and search engines)</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Meta description</strong> (encourages clicks from search results)</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Image alt text</strong> (adds accessibility and context when relevant)</li>
-      </ul>
-      <div style="background:#f8f9fc; border-radius:10px; padding:1.1rem 1.2rem; margin:2.2rem 0 1.5rem 0; display:flex; align-items:center; gap:0.8rem;">
-        <i class="fa fa-info-circle" style="color:#2563eb; font-size:1.1rem;"></i>
-        <div><strong>Tip:</strong> Use keywords naturally. Overusing them can reduce clarity and hurt readability. Consider synonyms and related terms to add context.</div>
-      </div>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Making Your Site Search Ready</h2>
-      <p>Even great content will not appear in search results if search engines cannot access or understand your site. You already learned how search engines crawl and index pages. Now it is time to make sure your site supports that process.</p>
-      <p>Think of your site like a bookstore. If a book is not placed on the right shelf, no one will find it. The same idea applies here. If search engines cannot reach your content, they cannot save it in their index.</p>
-      <p style="font-weight:600; margin-top:1.5rem;">Make sure your site is:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Crawlable and indexable:</strong> Pages with broken links, confusing navigation, or settings that block crawlers will not perform well.</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Organized by structure:</strong> Use one main headline (H1) per page, and subheadings (H2, H3) to guide content.</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Mobile-friendly and fast:</strong> Most visitors browse on phones. Slow or unresponsive sites lose users quickly.</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Connected internally:</strong> Link to other pages on your site. This helps search engines understand how your content fits together and keeps users exploring longer.</li>
-      </ul>
-      <div style="background:#f8f9fc; border-radius:10px; padding:1.1rem 1.2rem; margin:2.2rem 0 1.5rem 0; display:flex; align-items:center; gap:0.8rem;">
-        <i class="fa fa-search" style="color:#2563eb; font-size:1.1rem;"></i>
-        <div><strong><a href="https://search.google.com/search-console/about" target="_blank" style="color:#174ea6; text-decoration:none; border-bottom:1px dotted #174ea6; transition: border-bottom 0.18s;">Google Search Console</a></strong> helps you:
-          <ul style="margin-left:1.2rem; margin-bottom:0; list-style-type: disc;">
-            <li style="margin-bottom:0.7rem; color:#223;">Submit pages for indexing</li>
-            <li style="margin-bottom:0.7rem; color:#223;">Monitor clicks and search performance</li>
-            <li style="margin-bottom:0.7rem; color:#223;">Find out which keywords bring traffic</li>
-            <li style="margin-bottom:0.7rem; color:#223;">Fix crawl and mobile usability issues</li>
-          </ul>
-          <span style="color:#3b4a6b;">This tool is free and important for tracking how search engines see your site.</span>
-        </div>
-      </div>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Matching What People Want</h2>
-      <p>SEO is not just about traffic. It is about reaching the right people. That means understanding <strong>search intent</strong> — the reason behind a search.</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Informational intent:</strong> If someone searches "how to fix a slow laptop," they want a solution, not a product ad.</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Transactional intent:</strong> If someone searches "buy waterproof running headphones," they are ready to make a purchase.</li>
-      </ul>
-      <p>Matching your content to the user's intent makes it more helpful, more trustworthy, and more likely to succeed.</p>
-      <p>This principle also applies to paid search. Even with ads, search engines prioritize relevance. Whether through organic results or paid placement, meeting the user's expectations builds trust and improves results.</p>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Writing Strong Title Tags and Meta Descriptions</h2>
-      <p>Your <strong>title tag</strong> is the name of your page that appears in search results. It should:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Include your main keyword:</strong> Make it clear what the page is about</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Stay under 60 characters:</strong> Prevents search engines from cutting it off</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Clearly describe the page:</strong> Give users a reason to click</li>
-      </ul>
-      <p>Your <strong>meta description</strong> is the summary text below your title. While it does not impact rankings directly, it can affect whether users choose to click. It should:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Be 150–160 characters long:</strong> Short and to the point</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Use natural, relevant language:</strong> Match what the user is searching for</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Clearly match the search:</strong> Set expectations for the page</li>
-      </ul>
-      <p>Think of this as your first impression. If done well, it gives users a reason to visit your site.</p>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Creating Fresh, Helpful Content</h2>
-      <p>Search engines aim to deliver useful, up-to-date content. That is why freshness matters.</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Focus on solving real problems:</strong> Answer common questions</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Be clear and direct:</strong> Write like you are helping someone</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Use examples, data, or visuals:</strong> Add depth and credibility</li>
-      </ul>
-      <p>You do not need to publish new content every day. Instead, stay consistent and keep your existing content current.</p>
-      <p style="font-weight:600; margin-top:1.5rem;">Update older pages by:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Refreshing examples</strong></li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Rewriting sections to reflect current trends</strong></li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Fixing outdated information or links</strong></li>
-      </ul>
-      <p>Doing this shows your site is active and reliable, which can help with rankings.</p>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:left; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Measuring What Is Working</h2>
-      <p>You cannot improve what you do not track. Using tools like <a href="https://analytics.google.com/" target="_blank" style="color:#174ea6; text-decoration:underline;">Google Analytics</a> and <a href="https://search.google.com/search-console/about" target="_blank" style="color:#174ea6; text-decoration:underline;">Google Search Console</a> helps you see what is effective.</p>
-      <p style="font-weight:600; margin-top:1.5rem;">Track metrics like:</p>
-      <ul style="margin-left:1.2rem; margin-bottom:1.2rem; list-style-type: disc;">
-        <li style="margin-bottom:1rem; color:#223;"><strong>Page views:</strong> How many people visited a page</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Bounce rate:</strong> How many left after one page</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Time on page:</strong> How long people stayed</li>
-        <li style="margin-bottom:1rem; color:#223;"><strong>Click-through rate:</strong> How often people clicked from search results</li>
-      </ul>
-      <div style="background:#f8f9fc; border-radius:10px; padding:1.1rem 1.2rem; margin:2.2rem 0 1.5rem 0; display:flex; align-items:center; gap:0.8rem;">
-        <i class="fa fa-chart-line" style="color:#2563eb; font-size:1.1rem;"></i>
-        <div><strong>These tools show which content connects with your audience and where you can improve. SEO is not a one-time fix. It requires continuous review and adjustment.</strong></div>
-      </div>
-    </section>
-
-    <section style="margin-bottom:2.2rem;">
-      <h2 style="color:#223; font-size:1.35rem; font-weight:800; text-align:center; margin:2.7rem 0 1.3rem 0; letter-spacing:-0.01em;">Bringing It All Together</h2>
-      <p>Effective SEO is not just about knowing the terms. It is about applying them in meaningful ways that build long-term results. Keyword research tells you what people are looking for. Structure makes your site easier to explore. Content brings your value to life.</p>
-      <p>Use tools like Google Analytics and Google Search Console to stay in control, measure your progress, and adjust your strategy as needed.</p>
-      <p>You already know the language. Now you are building a strategy. Ready to go further?</p>
-    </section>
-
-    <section style="margin-bottom:0;">
-      <div class="cta-final-block" style="padding: 3rem 1.5rem 3.5rem 1.5rem; text-align: center; background: #f8faff; border-radius: 1.5rem; margin-top: 3.5rem;">
-        <h2 style="color: #1e40af; font-size: 2.1rem; font-weight: 700; margin-bottom: 1.1rem; letter-spacing: -1px;">Ready to Put Strategy Into Action?</h2>
-        <p style="font-size: 1.22rem; line-height: 1.7; max-width: 540px; margin: 0 auto 2.2rem auto; color: #223; font-weight:600;">Up next: Explore advanced SEO techniques to boost your performance even more.</p>
-        <a href="start-a-project.html" class="cta" style="display: inline-block; font-size: 1.13rem; padding: 0.95em 2.2em; background: #1e40af; color: #fff; border-radius: 2em; font-weight: 600; box-shadow: 0 2px 12px rgba(30,64,175,0.07); text-decoration: none; transition: background 0.18s;">Start Your Project Now &rarr;</a>
-      </div>
-    </section>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+    </nav>
+  </header>
+  <div class="progress-bar"></div>
+  <div class="main-container">
+    <div class="strategy-intro-hero">
+      <h1 style="color:#fff; font-weight:bold;">Learn SEO Step by Step with a Beginner Strategy</h1>
+      <p>Learning SEO step by step means moving from definitions to application. This section walks you through beginner SEO strategy in a clear, practical way so you can start optimizing your content with confidence and intent.</p>
     </div>
-  </footer>
+    <div class="strategy-container">
+      <!-- Keyword Basics Section -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">🔑</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Keyword Basics</h2>
+        </div>
+        <div class="strategy-content">
+          <p>You already know what keywords are. Now let's look at how to use them effectively. SEO is not about stuffing your site with random search terms. It is about choosing the right keywords and placing them with purpose.</p>
+          <p>For example, if you are selling wireless headphones, you might think the word <em>headphones</em> should appear throughout your site. But that term is highly competitive. Large retailers dominate those results. Even if you use the keyword, your page is unlikely to appear near the top.</p>
+          <p>That is why strategy matters. Different keyword types play different roles:</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Short-tail keywords</strong> are broad terms like "headphones" <span style="color:#6b7280;">(these get high search volume but are highly competitive)</span></li>
+            <li><strong style="color:#111;">Long-tail keywords</strong> are more specific phrases like "best wireless headphones for workouts" or "waterproof black earbuds for swimming" <span style="color:#6b7280;">(easier to rank for and match searcher intent)</span></li>
+          </ul>
+          <p>A strong strategy uses a mix of both. Short-tail keywords can boost visibility. Long-tail keywords help attract more targeted traffic.</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-header">
+            <i class="fas fa-lightbulb info-box-icon"></i>
+            <h3 class="info-box-title" style="color:#111; font-weight:bold;">Where to use your keywords:</h3>
+          </div>
+          <div class="info-box-content">
+            <ul>
+              <li><strong style="color:#111;">Page titles</strong> (show the topic clearly)</li>
+              <li><strong style="color:#111;">Headings (H1, H2)</strong> (help with structure and understanding)</li>
+              <li><strong style="color:#111;">URL</strong> (keeps the web address relevant)</li>
+              <li><strong style="color:#111;">First paragraph</strong> (sets the tone for both users and search engines)</li>
+              <li><strong style="color:#111;">Meta description</strong> (encourages clicks from search results)</li>
+              <li><strong style="color:#111;">Image alt text</strong> (adds accessibility and context when relevant)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="strategy-highlight">
+          <strong>Tip:</strong> Use keywords naturally. Overusing them can reduce clarity and hurt readability. Consider synonyms and related terms to add context.
+        </div>
+      </section>
+      <!-- Making Your Site Search Ready -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">🔍</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Making Your Site Search Ready</h2>
+        </div>
+        <div class="strategy-content">
+          <p>Even great content will not appear in search results if search engines cannot access or understand your site. You already learned how search engines crawl and index pages. Now it is time to make sure your site supports that process.</p>
+          <p>Think of your site like a bookstore. If a book is not placed on the right shelf, no one will find it. The same idea applies here. If search engines cannot reach your content, they cannot save it in their index.</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Crawlable and indexable:</strong> Pages with broken links, confusing navigation, or settings that block crawlers will not perform well.</li>
+            <li><strong style="color:#111;">Organized by structure:</strong> Use one main headline (H1) per page, and subheadings (H2, H3) to guide content.</li>
+            <li><strong style="color:#111;">Mobile-friendly and fast:</strong> Most visitors browse on phones. Slow or unresponsive sites lose users quickly.</li>
+            <li><strong style="color:#111;">Connected internally:</strong> Link to other pages on your site. This helps search engines understand how your content fits together and keeps users exploring longer.</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <div class="info-box-header">
+            <i class="fas fa-chart-line info-box-icon"></i>
+            <h3 class="info-box-title" style="color:#111; font-weight:bold;">Google Search Console helps you:</h3>
+          </div>
+          <div class="info-box-content">
+            <ul>
+              <li>Submit pages for indexing</li>
+              <li>Monitor clicks and search performance</li>
+              <li>Find out which keywords bring traffic</li>
+              <li>Fix crawl and mobile usability issues</li>
+            </ul>
+            <p style="margin-top: 1rem; font-style: italic;">This tool is free and important for tracking how search engines see your site.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Matching What People Want -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">🎯</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Matching What People Want</h2>
+        </div>
+        <div class="strategy-content">
+          <p>SEO is not just about traffic. It is about reaching the right people. That means understanding <strong style="color:#111;">search intent</strong> — the reason behind a search.</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Informational intent:</strong> If someone searches "how to fix a slow laptop," they want a solution, not a product ad.</li>
+            <li><strong style="color:#111;">Transactional intent:</strong> If someone searches "buy waterproof running headphones," they are ready to make a purchase.</li>
+          </ul>
+          <p>Matching your content to the user's intent makes it more helpful, more trustworthy, and more likely to succeed.</p>
+          <p>This principle also applies to paid search. Even with ads, search engines prioritize relevance. Whether through organic results or paid placement, meeting the user's expectations builds trust and improves results.</p>
+        </div>
+      </section>
+      <!-- Writing Strong Title Tags and Meta Descriptions -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Writing Strong Title Tags and Meta Descriptions</h2>
+        </div>
+        <div class="strategy-content">
+          <p>Your <strong style="color:#111;">title tag</strong> is the name of your page that appears in search results. It should:</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Include your main keyword:</strong> Make it clear what the page is about</li>
+            <li><strong style="color:#111;">Stay under 60 characters:</strong> Prevents search engines from cutting it off</li>
+            <li><strong style="color:#111;">Clearly describe the page:</strong> Give users a reason to click</li>
+          </ul>
+          <p>Your <strong style="color:#111;">meta description</strong> is the summary text below your title. While it does not impact rankings directly, it can affect whether users choose to click. It should:</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Be 150–160 characters long:</strong> Short and to the point</li>
+            <li><strong style="color:#111;">Use natural, relevant language:</strong> Match what the user is searching for</li>
+            <li><strong style="color:#111;">Clearly match the search:</strong> Set expectations for the page</li>
+          </ul>
+          <p>Think of this as your first impression. If done well, it gives users a reason to visit your site.</p>
+        </div>
+      </section>
+      <!-- Creating Fresh, Helpful Content -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">📄</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Creating Fresh, Helpful Content</h2>
+        </div>
+        <div class="strategy-content">
+          <p>Search engines aim to deliver useful, up-to-date content. That is why freshness matters.</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Focus on solving real problems:</strong> Answer common questions</li>
+            <li><strong style="color:#111;">Be clear and direct:</strong> Write like you are helping someone</li>
+            <li><strong style="color:#111;">Use examples, data, or visuals:</strong> Add depth and credibility</li>
+          </ul>
+          <p>You do not need to publish new content every day. Instead, stay consistent and keep your existing content current.</p>
+        </div>
+        <div class="info-box">
+          <div class="info-box-header">
+            <i class="fas fa-sync-alt info-box-icon"></i>
+            <h3 class="info-box-title" style="color:#111; font-weight:bold;">Update older pages by:</h3>
+          </div>
+          <div class="info-box-content">
+            <ul>
+              <li>Refreshing examples</li>
+              <li>Rewriting sections to reflect current trends</li>
+              <li>Fixing outdated information or links</li>
+            </ul>
+            <p style="margin-top: 1rem;">Doing this shows your site is active and reliable, which can help with rankings.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Measuring What Is Working -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">📊</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Measuring What Is Working</h2>
+        </div>
+        <div class="strategy-content">
+          <p>You cannot improve what you do not track. Using tools like Google Analytics and Google Search Console helps you see what is effective.</p>
+          <ul class="strategy-list">
+            <li><strong style="color:#111;">Page views:</strong> How many people visited a page</li>
+            <li><strong style="color:#111;">Bounce rate:</strong> How many left after one page</li>
+            <li><strong style="color:#111;">Time on page:</strong> How long people stayed</li>
+            <li><strong style="color:#111;">Click-through rate:</strong> How often people clicked from search results</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <div class="info-box-header">
+            <i class="fas fa-chart-line info-box-icon"></i>
+            <h3 class="info-box-title" style="color:#111; font-weight:bold;">Key Insight</h3>
+          </div>
+          <div class="info-box-content">
+            These tools show which content connects with your audience and where you can improve. SEO is not a one-time fix. It requires continuous review and adjustment.
+          </div>
+        </div>
+      </section>
+      <!-- Bringing It All Together -->
+      <section class="strategy-section">
+        <div class="section-header">
+          <div class="section-icon">🧩</div>
+          <h2 class="section-title" style="color:#111; font-weight:bold;">Bringing It All Together</h2>
+        </div>
+        <div class="strategy-content">
+          <p>Effective SEO is not just about knowing the terms. It is about applying them in meaningful ways that build long-term results. <strong style="color:#111;">Keyword research</strong> tells you what people are looking for. <strong style="color:#111;">Structure</strong> makes your site easier to explore. <strong style="color:#111;">Content</strong> brings your value to life.</p>
+          <p>Use tools like Google Analytics and Google Search Console to stay in control, measure your progress, and adjust your strategy as needed.</p>
+          <p>You already know the language. Now you are building a strategy. Ready to go further?</p>
+        </div>
+      </section>
+    </div>
+    <!-- CTA Section -->
+    <div class="cta-section" style="margin-top:3.5rem; margin-bottom:3.5rem; text-align:center;">
+      <h2 class="cta-title" style="color:#fff !important; font-size:2.1rem; font-weight:800;">Ready to Put Strategy Into Action?</h2>
+      <p class="cta-description" style="color:#fff !important; font-size:1.15rem; margin-bottom:2rem;">Up next: Explore advanced SEO techniques to boost your performance even more.</p>
+      <a href="start-a-project.html" class="cta-button" style="background:linear-gradient(135deg,#4F7CFF 0%,#8B5FBF 100%);color:#fff !important;padding:1rem 2.5rem;border-radius:50px;font-weight:700;font-size:1.125rem;text-decoration:none;box-shadow:0 4px 15px rgba(79,124,255,0.13);display:inline-flex;align-items:center;gap:0.75rem;transition:background 0.2s,box-shadow 0.2s,transform 0.15s;">Start Your Project Now <span class="cta-arrow" style="font-size:1.25rem;transition:transform 0.3s ease;color:#fff !important;">→</span></a>
+    </div>
+    <footer class="footer">
+      <p style="color:rgba(255,255,255,0.7); font-size:0.875rem; margin:0; padding:2rem 0 0.5rem 0; text-align:center; background:none;">© 2024 SEO Learning Guide. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="universal-features.js"></script>
 </body>
 </html> 
