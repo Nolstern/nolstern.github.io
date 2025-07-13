@@ -9,78 +9,479 @@
   <meta name="description" content="Learn how to track SEO performance with Google Analytics 4. Discover key metrics, reports, and strategies to measure your search optimization success.">
   <meta name="keywords" content="GA4, Google Analytics 4, SEO tracking, engagement, landing page reports, returning users, conversion events, beginner SEO" />
   <link rel="canonical" href="/blog/ga4-seo-tracking.html" />
-  
-  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="GA4 SEO Tracking for Beginners – How to Measure What Really Matters" />
   <meta property="og:description" content="Learn how to track SEO performance with Google Analytics 4. Discover key metrics, reports, and strategies to measure your search optimization success." />
   <meta property="og:image" content="https://nolstern.github.io/Images/logo-seo.png" />
   <meta property="og:url" content="/blog/ga4-seo-tracking.html" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GA4 SEO Tracking for Beginners – How to Measure What Really Matters" />
   <meta name="twitter:description" content="Learn how to track SEO performance with Google Analytics 4. Discover key metrics, reports, and strategies to measure your search optimization success." />
   <meta name="twitter:image" content="https://nolstern.github.io/Images/logo-seo.png" />
-  
   <link rel="stylesheet" href="../styles.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF302P8XBG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RF302P8XBG');
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      min-height: 100vh;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(59,77,138,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .main-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+      min-height: 100vh;
+      background: transparent;
+    }
+    .blog-post-card {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: 0 8px 32px rgba(118,75,162,0.13);
+      margin: 0 auto 2.5rem auto;
+      max-width: 900px;
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .blog-post-card h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      color: #111;
+      letter-spacing: -0.01em;
+      line-height: 1.18;
+    }
+    .read-time {
+      color: #764ba2;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 2.2rem;
+    }
+    .blog-post-card p {
+      color: #111;
+      font-size: 1.13rem;
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+    .blog-post-card a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .blog-post-card a:hover {
+      color: #764ba2;
+      text-decoration: underline wavy 2px;
+    }
+    .blog-post-card h2 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #111;
+      margin: 2.5rem 0;
+      text-align: left;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      position: relative;
+      padding-left: 1.1rem;
+    }
+    .blog-post-card h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+    /* Metric Cards */
+    .metrics-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2.2rem 0 2.2rem 0;
+    }
+    .metric-card {
+      background: linear-gradient(135deg, #f8faff 0%, #e3f2fd 100%);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      border-radius: 20px;
+      border-left: 5px solid #667eea;
+      box-shadow: 0 8px 32px rgba(102,126,234,0.10);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 120px;
+      width: 100%;
+    }
+    .metric-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 0.7rem;
+    }
+    .metric-description {
+      font-size: 1.05rem;
+      color: #3b4a6b;
+      line-height: 1.6;
+    }
+    /* Remove .keep-learning-cta and related classes, keep only .cta-section and related styles for the CTA */
+    .cta-section {
+      color: #fff;
+      text-align: center;
+      padding: 2.7rem 0 2.2rem 0;
+      max-width: 900px;
+      margin: 3.5rem auto 2.5rem auto;
+      background: none !important;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cta-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 12px rgba(59,77,138,0.18);
+    }
+    .cta-description {
+      font-size: 1.15rem;
+      margin-bottom: 2.2rem;
+      opacity: 0.93;
+    }
+    .cta-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      width: 100%;
+      align-items: center;
+    }
+    .cta-card {
+      background: rgba(255,255,255,0.13);
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(102,126,234,0.10);
+      padding: 1.3rem 1.5rem;
+      min-width: 220px;
+      max-width: 540px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      color: #fff;
+      font-weight: 600;
+      border-left: 5px solid #fff;
+      transition: box-shadow 0.18s, transform 0.18s, background 0.18s;
+      backdrop-filter: blur(8px);
+      justify-content: flex-start;
+      margin-bottom: 0;
+      gap: 1.1rem;
+    }
+    .cta-card:hover {
+      box-shadow: 0 8px 32px rgba(102,126,234,0.18);
+      transform: translateY(-3px) scale(1.03);
+      background: rgba(255,255,255,0.22);
+    }
+    .cta-card-icon {
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(118,75,162,0.22);
+      border-radius: 50%;
+      width: 2.3rem;
+      height: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(118,75,162,0.10);
+      flex-shrink: 0;
+    }
+    .cta-card-content {
+      text-align: left;
+    }
+    .cta-card-title, .cta-card-link {
+      color: #fff;
+    }
+    .cta-card-link {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .cta-card-link:hover {
+      color: #ffd600;
+      text-decoration: underline wavy 2px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      font-size: 1.13rem;
+      font-weight: 800;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(79,124,255,0.13);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s, color 0.2s;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    .cta-button:hover {
+      background: #f3e8ff;
+      color: #4F7CFF;
+      box-shadow: 0 8px 30px rgba(79,124,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .cta-arrow {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .cta-button:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+    .footer-content {
+      border-top: 1.5px solid #e0e7ef;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+    .blog-hero-custom {
+      background: none !important;
+      padding: 7rem 2rem 2.2rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .main-container {
+      position: relative;
+      z-index: 3;
+    }
+    .hero-title {
+      font-size: 2.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.1rem;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1rem;
+      opacity: 0.92;
+      font-weight: 600;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+    .keep-learning-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .keep-learning-item {
+      background: rgba(255,255,255,0.13);
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(102,126,234,0.10);
+      padding: 1.3rem 1.5rem;
+      min-width: 220px;
+      max-width: 540px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      color: #fff;
+      font-weight: 600;
+      border-left: 5px solid #fff;
+      transition: box-shadow 0.18s, transform 0.18s, background 0.18s;
+      backdrop-filter: blur(8px);
+      justify-content: flex-start;
+      margin-bottom: 0;
+      gap: 1.1rem;
+    }
+    .keep-learning-icon {
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(118,75,162,0.22);
+      border-radius: 50%;
+      width: 2.3rem;
+      height: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(118,75,162,0.10);
+      flex-shrink: 0;
+    }
+    .keep-learning-link {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      margin-left: 0;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .keep-learning-link:hover {
+      color: #ffd600;
+      text-decoration: underline wavy 2px;
+    }
+    .blog-hero-custom .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 1.3rem;
+      backdrop-filter: blur(10px);
+    }
+    .blog-hero-custom .hero-title {
+      font-size: 2.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.1rem;
+    }
+    .blog-hero-custom .hero-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.93;
+      margin-bottom: 1.7rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .blog-hero-custom .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1rem;
+      opacity: 0.92;
+      font-weight: 600;
+    }
+    .blog-hero-custom .hero-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+    @media (max-width: 700px) {
+      .main-container, .blog-post-card {
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+      }
+      .cta-section {
+        padding: 1.5rem 0 1.2rem 0;
+      }
+      .cta-card {
+        min-width: 160px;
+        font-size: 0.98rem;
+        padding: 1rem 0.7rem;
+      }
+    }
+  </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="../index.html" class="logo-link">
-      <img src="../Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-    </a>
-    <ul>
-      <li><a href="../why-seo-matters.html">Why SEO</a></li>
-      <li><a href="../terminology.html">Terminology</a></li>
-      <li><a href="../seo-strategy.html">Strategy</a></li>
-      <li><a href="../start-a-project.html">Start a Project</a></li>
-      <li><a href="../project-overview.html">Project Overview</a></li>
-      <li><a href="../seo-blog.html">Blog</a></li>
-    </ul>
-  </nav>
-  <main class="blog-post-container">
-    <h1>GA4 SEO Tracking for Beginners – How to Measure What Really Matters</h1>
-    <p class="read-time">🕒 5 min read</p>
-
-    <p>If you're learning SEO in 2025, understanding how to track your progress is just as important as learning keywords and content strategy. Google Analytics 4 (GA4) is the main tool most websites now use to monitor growth. But knowing which numbers actually matter, and how to use them, can be confusing at first.</p>
-
-    <p>This post highlights four areas in GA4 that help beginners track SEO results more clearly. Whether you're building a blog, running your first site, or just learning how analytics works, these tools can help you make smarter decisions and grow with more intention.</p>
-
-    <h2>1. Engagement Rate</h2>
-    <p>Unlike bounce rate, which just shows if someone leaves, engagement rate tells you how much time users actually spend on your content. Google considers this kind of behavior a positive signal. If people scroll, stay longer, or view multiple pages, it shows your SEO is attracting the right visitors.</p>
-
-    <h2>2. Landing Page Views</h2>
-    <p>In GA4, you can filter reports by landing pages to see which specific URLs are bringing in organic traffic. This shows you what content is driving discovery and what might need a refresh. It's one of the easiest ways to connect what you're writing to real search results.</p>
-
-    <h2>3. Returning Users</h2>
-    <p>If someone comes back to your site, that's a strong signal that your content was helpful. Returning user metrics show how sticky your content is and which SEO efforts are earning trust or relevance. GA4 shows this clearly in the user retention reports.</p>
-
-    <h2>4. Conversion Events</h2>
-    <p>You don't need to sell a product to use conversions. You can set goals like newsletter signups, link clicks, or scroll depth to measure whether your content is creating real engagement. In GA4, setting up conversion events helps you track actions that matter most to your goals, even as a beginner.</p>
-
-    <p>Analytics can feel intimidating at first, but these metrics give you a real window into how your SEO is performing. If you're building your skills, check out the <a href="../project-overview.html">Project Overview</a> to see how I applied GA4 tracking to my own beginner project.</p>
-
-    <div class="back-link">
-      <a href="../seo-blog.html">← Back to Blog Overview</a>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo-link">
+        <img src="../Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="../why-seo-matters.html">Why SEO</a></li>
+        <li><a href="../terminology.html">Terminology</a></li>
+        <li><a href="../seo-strategy.html">Strategy</a></li>
+        <li><a href="../start-a-project.html">Start a Project</a></li>
+        <li><a href="../project-overview.html">Project Overview</a></li>
+        <li><a href="../seo-blog.html">Blog</a></li>
+      </ul>
     </div>
-  </main>
-  <div class="related-posts" style="background:#f8f9fc; border-radius:14px; margin:2.5rem auto 0 auto; max-width:650px; padding:2.2rem 1.5rem 1.7rem 1.5rem; box-shadow:0 2px 12px rgba(59,77,138,0.06);">
-    <h2 style="color:#174ea6; font-size:1.35rem; font-weight:700; margin-bottom:1.2rem; text-align:center;">Related Posts</h2>
-    <ul style="list-style:none; padding:0; margin:0; text-align:center;">
-      <li style="margin-bottom:1.1rem;"><a href="internal-linking-ai.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">How to Use Internal Linking with AI</a></li>
-      <li style="margin-bottom:1.1rem;"><a href="mastering-aeo-2025.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">Mastering AEO for SEO in 2025</a></li>
-      <li><a href="../start-a-project.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">Start Your SEO Project</a></li>
-    </ul>
+  </nav>
+  <section class="blog-hero-custom">
+    <div class="hero-badge">SEO Analytics Guide</div>
+    <div class="hero-title">GA4 SEO Tracking for Beginners</div>
+    <div class="hero-subtitle">How to Measure What Really Matters</div>
+    <div class="hero-meta">
+      <div class="meta-item"><i class="fas fa-clock"></i> 4 min read</div>
+      <div class="meta-item"><i class="fas fa-calendar"></i> January 2025</div>
+      <div class="meta-item"><i class="fas fa-tags"></i> SEO, Learning, Beginners</div>
+    </div>
+  </section>
+  <div class="main-container">
+    <div class="blog-post-card">
+      <p>If you're learning SEO in 2025, understanding how to track your progress is just as important as learning keywords and content strategy. Google Analytics 4 (GA4) is the main tool most websites now use to monitor growth. But knowing which numbers actually matter, and how to use them, can be confusing at first.</p>
+      <p>This post highlights four areas in GA4 that help beginners track SEO results more clearly. Whether you're building a blog, running your first site, or just learning how analytics works, these tools can help you make smarter decisions and grow with more intention.</p>
+      <h2>Key GA4 Metrics for SEO</h2>
+      <div class="metrics-list">
+        <div class="metric-card">
+          <div class="metric-title">1. Engagement Rate</div>
+          <div class="metric-description">Unlike bounce rate, which just shows if someone leaves, engagement rate tells you how much time users actually spend on your content. Google considers this kind of behavior a positive signal. If people scroll, stay longer, or view multiple pages, it shows your SEO is attracting the right visitors.</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">2. Landing Page Views</div>
+          <div class="metric-description">In GA4, you can filter reports by landing pages to see which specific URLs are bringing in organic traffic. This shows you what content is driving discovery and what might need a refresh. It's one of the easiest ways to connect what you're writing to real search results.</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">3. Returning Users</div>
+          <div class="metric-description">If someone comes back to your site, that's a strong signal that your content was helpful. Returning user metrics show how sticky your content is and which SEO efforts are earning trust or relevance. GA4 shows this clearly in the user retention reports.</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-title">4. Conversion Events</div>
+          <div class="metric-description">You don't need to sell a product to use conversions. You can set goals like newsletter signups, link clicks, or scroll depth to measure whether your content is creating real engagement. In GA4, setting up conversion events helps you track actions that matter most to your goals, even as a beginner.</div>
+        </div>
+      </div>
+      <p>Analytics can feel intimidating at first, but these metrics give you a real window into how your SEO is performing. If you're building your skills, check out the <a href="../project-overview.html">Project Overview</a> to see how I applied GA4 tracking to my own beginner project.</p>
+    </div>
+    <div class="cta-section">
+      <div class="cta-title">Keep Learning: Next Steps in SEO</div>
+      <div class="cta-description">Explore more beginner-friendly guides and stay ahead as search evolves.</div>
+      <div class="cta-cards">
+        <div class="cta-card">
+          <div class="cta-card-icon"><i class="fa-solid fa-link"></i></div>
+          <div class="cta-card-content">
+            <div class="cta-card-title">Internal Linking with AI</div>
+            <a class="cta-card-link" href="internal-linking-ai.html">See Internal Linking Tips</a>
+          </div>
+        </div>
+        <div class="cta-card">
+          <div class="cta-card-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="cta-card-content">
+            <div class="cta-card-title">AI Mode SEO in 2025</div>
+            <a class="cta-card-link" href="mastering-aeo-2025.html">Read the AI SEO Guide</a>
+          </div>
+        </div>
+        <div class="cta-card">
+          <div class="cta-card-icon"><i class="fa-solid fa-rocket"></i></div>
+          <div class="cta-card-content">
+            <div class="cta-card-title">Start Your SEO Project</div>
+            <a class="cta-card-link" href="../start-a-project.html">Start Now</a>
+          </div>
+        </div>
+      </div>
+      <a href="../seo-blog.html" class="cta-button">See All Blog Posts <span class="cta-arrow">→</span></a>
+    </div>
   </div>
   <footer>
     <div class="footer-content">

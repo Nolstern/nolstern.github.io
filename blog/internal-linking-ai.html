@@ -10,88 +10,434 @@
   <meta name="keywords" content="internal linking, SEO, AI-first search, Google, site structure, anchor text, beginner SEO" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="canonical" href="/blog/internal-linking-ai.html" />
-  
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Why Internal Linking Still Matters in 2025" />
   <meta property="og:description" content="Master internal linking strategies with AI tools. Learn how to create effective link structures that improve SEO and user experience on your website." />
   <meta property="og:image" content="https://nolstern.github.io/Images/logo-seo.png" />
   <meta property="og:url" content="/blog/internal-linking-ai.html" />
   <meta property="og:type" content="website" />
-
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Why Internal Linking Still Matters in 2025" />
   <meta name="twitter:description" content="Master internal linking strategies with AI tools. Learn how to create effective link structures that improve SEO and user experience on your website." />
   <meta name="twitter:image" content="https://nolstern.github.io/Images/logo-seo.png" />
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF302P8XBG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RF302P8XBG');
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body.unified-blog {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      min-height: 100vh;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(59,77,138,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .hero-section {
+      max-width: 900px;
+      margin: 2.5rem auto 0 auto;
+      text-align: center;
+      color: #fff;
+      padding: 0 1.5rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 999px;
+      padding: 0.4rem 1.2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 8px rgba(79,124,255,0.13);
+    }
+    .hero-title {
+      font-size: 2.7rem;
+      font-weight: 800;
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      margin-bottom: 1.7rem;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1rem;
+      color: #e0e7ff;
+      opacity: 0.92;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .main-card {
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto 2.5rem auto;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(59,77,138,0.12);
+      padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .main-card { padding: 1.2rem 0.7rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-section { padding: 0 0.2rem; }
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #174ea6;
+      margin: 2.2rem 0 1.1rem 0;
+    }
+    .section-title-bar {
+      width: 6px;
+      height: 28px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .main-card p, .main-card li {
+      color: #111;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .main-card ul {
+      margin: 1.2rem 0 1.2rem 1.2rem;
+      padding: 0;
+    }
+    .main-card ul li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .main-card ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: bold;
+    }
+    .main-card a {
+      color: #4F7CFF;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .main-card a:hover {
+      color: #764ba2;
+    }
+    .cta-section {
+      color: #fff;
+      text-align: center;
+      padding: 2.7rem 0 2.2rem 0;
+      max-width: 900px;
+      margin: 3.5rem auto 2.5rem auto;
+      background: none !important;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cta-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 1.1rem;
+    }
+    .cta-description {
+      font-size: 1.15rem;
+      margin-bottom: 2.2rem;
+      opacity: 0.93;
+    }
+    .cta-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      align-items: center;
+      margin-bottom: 2.2rem;
+    }
+    .cta-card {
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      border-radius: 18px;
+      box-shadow: none;
+      padding: 1.3rem 1.5rem;
+      max-width: 420px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      margin: 0 auto;
+      border-left: 5px solid #fff;
+      transition: box-shadow 0.2s, background 0.2s;
+      backdrop-filter: blur(8px);
+    }
+    .cta-card:hover {
+      box-shadow: 0 8px 30px rgba(79,124,255,0.18);
+    }
+    .cta-card-icon {
+      font-size: 2.1rem;
+      color: #764ba2;
+      flex-shrink: 0;
+      background: #f4f6fb;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cta-card-content {
+      text-align: left;
+    }
+    .cta-card-title {
+      font-weight: 700;
+      font-size: 1.13rem;
+      margin-bottom: 0.2rem;
+      color: #fff;
+    }
+    .cta-card-link {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 1rem;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .cta-card-link:hover {
+      color: #ffd600;
+      text-decoration: underline wavy 2px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(90deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      font-size: 1.13rem;
+      font-weight: 800;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(79,124,255,0.13);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s, color 0.2s;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    .cta-button:hover {
+      background: #f3e8ff;
+      color: #4F7CFF;
+      box-shadow: 0 8px 30px rgba(79,124,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .cta-arrow {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    .cta-button:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.95rem;
+      margin: 0;
+      padding: 2rem 0 0.5rem 0;
+      background: none;
+    }
+    /* --- KEEP LEARNING CTA (GA4 STYLE) --- */
+    .keep-learning-cta {
+      background: none !important;
+      border-radius: 0;
+      box-shadow: none;
+      max-width: 900px;
+      margin: 3.5rem auto 2.5rem auto;
+      padding: 2.7rem 0 2.2rem 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .keep-learning-cta h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.01em;
+      text-shadow: 0 2px 12px rgba(59,77,138,0.18);
+    }
+    .keep-learning-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      width: 100%;
+    }
+    .keep-learning-item {
+      background: rgba(255,255,255,0.13);
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(102,126,234,0.10);
+      padding: 1.3rem 1.5rem;
+      min-width: 220px;
+      max-width: 540px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      font-size: 1.08rem;
+      color: #fff;
+      font-weight: 600;
+      border-left: 5px solid #fff;
+      transition: box-shadow 0.18s, transform 0.18s, background 0.18s;
+      backdrop-filter: blur(8px);
+      justify-content: flex-start;
+      margin-bottom: 0;
+      gap: 1.1rem;
+    }
+    .keep-learning-item:hover {
+      box-shadow: 0 8px 32px rgba(102,126,234,0.18);
+      transform: translateY(-3px) scale(1.03);
+      background: rgba(255,255,255,0.22);
+    }
+    .keep-learning-icon {
+      font-size: 1.5rem;
+      color: #fff;
+      background: rgba(118,75,162,0.22);
+      border-radius: 50%;
+      width: 2.3rem;
+      height: 2.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(118,75,162,0.10);
+      flex-shrink: 0;
+    }
+    .keep-learning-link {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+      margin-left: 0;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .keep-learning-link:hover {
+      color: #ffd600;
+      text-decoration: underline wavy 2px;
+    }
+    .keep-learning-btn {
+      display: inline-block;
+      background: #fff;
+      color: #764ba2;
+      font-size: 1.13rem;
+      font-weight: 800;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(79,124,255,0.13);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s, color 0.2s;
+      margin-top: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    .keep-learning-btn:hover {
+      background: #f3e8ff;
+      color: #4F7CFF;
+      box-shadow: 0 8px 30px rgba(79,124,255,0.18);
+      transform: translateY(-2px) scale(1.04);
+    }
+  </style>
 </head>
-<body style="background:#f4f6fb; color:#111;">
-  <nav class="navbar" style="background:#fff; box-shadow:0 2px 8px rgba(59,77,138,0.06);">
-    <a href="../index.html" class="logo-link">
-      <img src="../Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
-    </a>
-    <ul>
-      <li><a href="../why-seo-matters.html">Why SEO</a></li>
-      <li><a href="../terminology.html">Terminology</a></li>
-      <li><a href="../seo-strategy.html">Strategy</a></li>
-      <li><a href="../start-a-project.html">Start a Project</a></li>
-      <li><a href="../project-overview.html">Project Overview</a></li>
-      <li><a href="../seo-blog.html">Blog</a></li>
-    </ul>
+<body class="unified-blog">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo-link">
+        <img src="../Images/logo-seo.png" alt="Beginner SEO Guide Logo – Learn SEO Step by Step" class="logo-img">
+      </a>
+      <ul>
+        <li><a href="../why-seo-matters.html">Why SEO</a></li>
+        <li><a href="../terminology.html">Terminology</a></li>
+        <li><a href="../seo-strategy.html">Strategy</a></li>
+        <li><a href="../start-a-project.html">Start a Project</a></li>
+        <li><a href="../project-overview.html">Project Overview</a></li>
+        <li><a href="../seo-blog.html">Blog</a></li>
+      </ul>
+    </div>
   </nav>
-  <main class="blog-post-container">
-    <h1>Internal Linking for SEO in 2025 – Why It Still Matters in an AI-Driven World</h1>
-    <p class="read-time">🕒 3 min read</p>
-
+  <div class="progress-bar"></div>
+  <div class="hero-section">
+    <div class="hero-badge">Internal Links</div>
+    <div class="hero-title">Internal Linking for SEO in 2025</div>
+    <div class="hero-subtitle">Why It Still Matters in an AI-Driven World</div>
+    <div class="hero-meta">
+      <span><i class="fa-regular fa-clock"></i> 3 min read</span>
+      <span><i class="fa-regular fa-calendar"></i> June 2025</span>
+      <span><i class="fa-solid fa-tags"></i> Internal Links, SEO, AI</span>
+    </div>
+  </div>
+  <div class="main-card">
     <p>Internal links help both users and search engines navigate your content more effectively. In 2025, with AI-powered search playing a bigger role, this simple technique is more valuable than ever. If you're new to SEO, learning how to use internal links early on will improve your site structure, boost relevance, and make your content easier to find.</p>
-
-    <h2>Why Internal Links Still Matter</h2>
+    <div class="section-title"><span class="section-title-bar"></span>Why Internal Links Still Matter</div>
     <p>AI-generated search results depend heavily on understanding how your content connects. When your pages link to each other clearly and naturally, you're giving search engines better context. This helps them match your site with the right searches and users more accurately.</p>
-
     <ul>
       <li>Internal links guide users to related content</li>
       <li>They tell Google what topics are important on your site</li>
       <li>They improve crawlability and page authority flow</li>
     </ul>
-
-    <h2>How It Connects to AI</h2>
+    <div class="section-title"><span class="section-title-bar"></span>How It Connects to AI</div>
     <p>Google's AI systems use your internal links to understand how your content is grouped and what topics matter most. This is especially helpful for long-form articles or collections of related posts. Linking pages together tells search engines which ideas belong to the same theme, making your content easier to recommend in AI-powered results.</p>
-
-    <h2>Beginner-Friendly Tips</h2>
+    <div class="section-title"><span class="section-title-bar"></span>Beginner-Friendly Tips</div>
     <ul>
       <li><strong>Use clear, relevant anchor text:</strong> Avoid vague phrases like "click here." Link with words that describe the topic being referenced.</li>
       <li><strong>Link to related ideas naturally:</strong> If you have a post about keyword research, link it from a guide on <a href="../seo-strategy.html">SEO strategy</a>.</li>
       <li><strong>Don't forget old content:</strong> Revisit past posts and add links to new articles where it makes sense. This keeps your content network strong.</li>
     </ul>
-
-    <h2>Want to See It in Practice?</h2>
+    <div class="section-title"><span class="section-title-bar"></span>Want to See It in Practice?</div>
     <p>Take a look at the <a href="../project-overview.html">Project Overview</a> to see how I used internal links across this site. You'll find examples of how linking key pages improves flow, supports user experience, and makes your structure easier for search engines to follow.</p>
-
-    <div class="back-link">
-      <a href="../seo-blog.html">← Back to Blog Overview</a>
-    </div>
-  </main>
-  <div class="related-posts" style="background:#f8f9fc; border-radius:14px; margin:2.5rem auto 0 auto; max-width:650px; padding:2.2rem 1.5rem 1.7rem 1.5rem; box-shadow:0 2px 12px rgba(59,77,138,0.06);">
-    <h2 style="color:#174ea6; font-size:1.35rem; font-weight:700; margin-bottom:1.2rem; text-align:center;">Related Posts</h2>
-    <ul style="list-style:none; padding:0; margin:0; text-align:center;">
-      <li style="margin-bottom:1.1rem;"><a href="ga4-seo-tracking.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">GA4 SEO Tracking Guide</a></li>
-      <li style="margin-bottom:1.1rem;"><a href="ai-mode-seo-2025.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">How AI is Changing SEO Content</a></li>
-      <li><a href="salesforce-ai-marketing.html" style="color:#2563eb; font-weight:600; text-decoration:underline;">Salesforce's AI SEO Strategy</a></li>
-    </ul>
   </div>
-  <footer>
-    <div class="footer-content">
-      <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+  <div class="cta-section">
+    <div class="cta-title">Keep Learning: Next Steps in SEO</div>
+    <div class="cta-description">Explore more beginner-friendly guides and stay ahead as search evolves.</div>
+    <div class="cta-cards">
+      <div class="cta-card">
+        <div class="cta-card-icon"><i class="fa-solid fa-link"></i></div>
+        <div class="cta-card-content">
+          <div class="cta-card-title">Internal Linking with AI</div>
+          <a class="cta-card-link" href="internal-linking-ai.html">See Internal Linking Tips</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <div class="cta-card-icon"><i class="fa-solid fa-robot"></i></div>
+        <div class="cta-card-content">
+          <div class="cta-card-title">AI Mode SEO in 2025</div>
+          <a class="cta-card-link" href="ai-mode-seo-2025.html">Read the AI SEO Guide</a>
+        </div>
+      </div>
+      <div class="cta-card">
+        <div class="cta-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="cta-card-content">
+          <div class="cta-card-title">GA4 SEO Tracking Guide</div>
+          <a class="cta-card-link" href="ga4-seo-tracking.html">Track SEO with GA4</a>
+        </div>
+      </div>
     </div>
+    <a href="../seo-blog.html" class="cta-button">See All Blog Posts <span class="cta-arrow">→</span></a>
+  </div>
+  <footer class="footer">
+    © 2024 SEO Learning Guide. All rights reserved.
   </footer>
+  <button class="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+  <script src="../universal-features.js"></script>
 </body>
 </html> 
