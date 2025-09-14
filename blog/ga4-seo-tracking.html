@@ -8,11 +8,11 @@
   <title>GA4 SEO Tracking for Beginners – How to Measure What Really Matters</title>
   <meta name="description" content="Learn how to track SEO performance with Google Analytics 4. Discover key metrics, reports, and strategies to measure your search optimization success.">
   <meta name="keywords" content="GA4, Google Analytics 4, SEO tracking, engagement, landing page reports, returning users, conversion events, beginner SEO" />
-  <link rel="canonical" href="/blog/ga4-seo-tracking.html" />
+  <link rel="canonical" href="https://nolstern.github.io/blog/ga4-seo-tracking.html" />
   <meta property="og:title" content="GA4 SEO Tracking for Beginners – How to Measure What Really Matters" />
   <meta property="og:description" content="Learn how to track SEO performance with Google Analytics 4. Discover key metrics, reports, and strategies to measure your search optimization success." />
   <meta property="og:image" content="https://nolstern.github.io/Images/logo-seo.png" />
-  <meta property="og:url" content="/blog/ga4-seo-tracking.html" />
+  <meta property="og:url" content="https://nolstern.github.io/blog/ga4-seo-tracking.html" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GA4 SEO Tracking for Beginners – How to Measure What Really Matters" />
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    body {
+    body.unified-blog {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
       min-height: 100vh;
@@ -35,6 +35,92 @@
       position: sticky;
       top: 0;
       z-index: 100;
+    }
+    .hero-section {
+      max-width: 900px;
+      margin: 2.5rem auto 0 auto;
+      text-align: center;
+      color: #fff;
+      padding: 0 1.5rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, #4F7CFF 0%, #8B5FBF 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 999px;
+      padding: 0.4rem 1.2rem;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 8px rgba(79,124,255,0.13);
+    }
+    .hero-title {
+      font-size: 2.7rem;
+      font-weight: 800;
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      margin-bottom: 1.7rem;
+      opacity: 0.95;
+      font-weight: 500;
+      color: #fff;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1rem;
+      color: #e0e7ff;
+      opacity: 0.92;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .main-card {
+      background: #fff;
+      max-width: 800px;
+      margin: 0 auto 2.5rem auto;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(59,77,138,0.12);
+      padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #174ea6;
+      margin: 2.2rem 0 1.1rem 0;
+    }
+    .section-title-bar {
+      width: 6px;
+      height: 28px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .main-card p, .main-card li {
+      color: #111;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+    .main-card a {
+      color: #4F7CFF;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .main-card a:hover {
+      color: #764ba2;
     }
     .main-container {
       max-width: 900px;
@@ -403,7 +489,7 @@
     }
   </style>
 </head>
-<body>
+<body class="unified-blog">
   <nav class="navbar">
     <div class="nav-container">
       <a href="../index.html" class="logo-link">
@@ -419,42 +505,32 @@
       </ul>
     </div>
   </nav>
-  <section class="blog-hero-custom">
-    <div class="hero-badge">SEO Analytics Guide</div>
-    <div class="hero-title">GA4 SEO Tracking for Beginners</div>
-    <div class="hero-subtitle">How to Measure What Really Matters</div>
+  <div class="hero-section">
+    <div class="hero-badge">GA4 & Analytics</div>
+    <div class="hero-title">GA4 SEO Tracking: How to Measure Your Search Success</div>
+    <div class="hero-subtitle">Essential metrics and reports for tracking SEO progress in Google Analytics 4</div>
     <div class="hero-meta">
-      <div class="meta-item"><i class="fas fa-clock"></i> 4 min read</div>
-      <div class="meta-item"><i class="fas fa-calendar"></i> January 2025</div>
-      <div class="meta-item"><i class="fas fa-tags"></i> SEO, Learning, Beginners</div>
+      <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+      <span><i class="fa-regular fa-calendar"></i> June 2025</span>
+      <span><i class="fa-solid fa-tags"></i> GA4, Analytics, SEO</span>
     </div>
-  </section>
-  <div class="main-container">
-    <div class="blog-post-card">
-      <p>If you're learning SEO in 2025, understanding how to track your progress is just as important as learning keywords and content strategy. Google Analytics 4 (GA4) is the main tool most websites now use to monitor growth. But knowing which numbers actually matter, and how to use them, can be confusing at first.</p>
-      <p>This post highlights four areas in GA4 that help beginners track SEO results more clearly. Whether you're building a blog, running your first site, or just learning how analytics works, these tools can help you make smarter decisions and grow with more intention.</p>
-      <h2>Key GA4 Metrics for SEO</h2>
-      <div class="metrics-list">
-        <div class="metric-card">
-          <div class="metric-title">1. Engagement Rate</div>
-          <div class="metric-description">Unlike bounce rate, which just shows if someone leaves, engagement rate tells you how much time users actually spend on your content. Google considers this kind of behavior a positive signal. If people scroll, stay longer, or view multiple pages, it shows your SEO is attracting the right visitors.</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-title">2. Landing Page Views</div>
-          <div class="metric-description">In GA4, you can filter reports by landing pages to see which specific URLs are bringing in organic traffic. This shows you what content is driving discovery and what might need a refresh. It's one of the easiest ways to connect what you're writing to real search results.</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-title">3. Returning Users</div>
-          <div class="metric-description">If someone comes back to your site, that's a strong signal that your content was helpful. Returning user metrics show how sticky your content is and which SEO efforts are earning trust or relevance. GA4 shows this clearly in the user retention reports.</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-title">4. Conversion Events</div>
-          <div class="metric-description">You don't need to sell a product to use conversions. You can set goals like newsletter signups, link clicks, or scroll depth to measure whether your content is creating real engagement. In GA4, setting up conversion events helps you track actions that matter most to your goals, even as a beginner.</div>
-        </div>
-      </div>
+  </div>
+  <div class="main-card">
+    <p>If you're learning SEO in 2025, understanding how to track your progress is just as important as learning keywords and content strategy. Google Analytics 4 (GA4) is the main tool most websites now use to monitor growth. But knowing which numbers actually matter, and how to use them, can be confusing at first.</p>
+    <p>This post highlights four areas in GA4 that help beginners track SEO results more clearly. Whether you're building a blog, running your first site, or just learning how analytics works, these tools can help you make smarter decisions and grow with more intention.</p>
+    <div class="section-title"><span class="section-title-bar"></span>Key GA4 Metrics for SEO</div>
+    <p>These four metrics give you the clearest picture of how your SEO is performing. Focus on these areas first before diving into more complex reports.</p>
+    <div class="section-title"><span class="section-title-bar"></span>1. Engagement Rate</div>
+    <p>Unlike bounce rate, which just shows if someone leaves, engagement rate tells you how much time users actually spend on your content. Google considers this kind of behavior a positive signal. If people scroll, stay longer, or view multiple pages, it shows your SEO is attracting the right visitors.</p>
+    <div class="section-title"><span class="section-title-bar"></span>2. Landing Page Views</div>
+    <p>In GA4, you can filter reports by landing pages to see which specific URLs are bringing in organic traffic. This shows you what content is driving discovery and what might need a refresh. It's one of the easiest ways to connect what you're writing to real search results.</p>
+    <div class="section-title"><span class="section-title-bar"></span>3. Returning Users</div>
+    <p>If someone comes back to your site, that's a strong signal that your content was helpful. Returning user metrics show how sticky your content is and which SEO efforts are earning trust or relevance. GA4 shows this clearly in the user retention reports.</p>
+    <div class="section-title"><span class="section-title-bar"></span>4. Conversion Events</div>
+    <p>You don't need to sell a product to use conversions. You can set goals like newsletter signups, link clicks, or scroll depth to measure whether your content is creating real engagement. In GA4, setting up conversion events helps you track actions that matter most to your goals, even as a beginner.</p>
       <p>Analytics can feel intimidating at first, but these metrics give you a real window into how your SEO is performing. If you're building your skills, check out the <a href="../project-overview.html">Project Overview</a> to see how I applied GA4 tracking to my own beginner project.</p>
-    </div>
-    <div class="cta-section">
+  </div>
+  <div class="cta-section">
       <div class="cta-title">Keep Learning: Next Steps in SEO</div>
       <div class="cta-description">Explore more beginner-friendly guides and stay ahead as search evolves.</div>
       <div class="cta-cards">
@@ -485,7 +561,7 @@
   </div>
   <footer>
     <div class="footer-content">
-      <p>© 2024 SEO Learning Guide. All rights reserved.</p>
+      <p>© 2025 SEO Learning Guide. All rights reserved.</p>
     </div>
   </footer>
 </body>
